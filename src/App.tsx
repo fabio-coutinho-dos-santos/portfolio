@@ -14,14 +14,13 @@ function App() {
   const { collapseSidebar } = useProSidebar();
 
   return (
-    <div id="app" style={({ display: "flex" })}>
-      <Sidebar style={{ height: "100vh", backgroundColor: 'grey' }}>
+    <div id="app">
+      <Sidebar className='sidebar'>
         <Menu>
           <MenuItem icon={<MenuOutlinedIcon />} onClick={() => {collapseSidebar();}}style={{ textAlign: "center" }}>
             {" "}
             <h2>Admin</h2>
           </MenuItem>
-
           <MenuItem icon={<HomeOutlinedIcon />}>Home</MenuItem>
           <MenuItem icon={<PeopleOutlinedIcon />}>Team</MenuItem>
           <SubMenu icon={<HomeOutlinedIcon />} label="SubMenu">
@@ -36,7 +35,7 @@ function App() {
         </Menu>
       </Sidebar>
       <main>
-        <h1 style={{ color: "white", marginLeft: "5rem" }}>
+        <h1>
           React-Pro-Sidebar
         </h1>
       </main>
