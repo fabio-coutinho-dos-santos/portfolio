@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
@@ -9,19 +7,31 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { Menu, MenuItem, Sidebar, SubMenu, useProSidebar } from 'react-pro-sidebar';
-
+import Login
+ from './pages/Login/Login';
+import { useEffect } from 'react';
+import { useSetBodyColor } from './hooks/useSetBodyColor';
+import Register from './pages/Register/Register';
 function App() {
   const { collapseSidebar } = useProSidebar();
+  const logged = true
+
+  const {setBodyColor} = useSetBodyColor()
+
+  useEffect(()=>{
+    setBodyColor("#ffffff")
+  },[])
 
   return (
-    <div id="app" style={({ display: "flex" })}>
-      <Sidebar style={{ height: "100vh", backgroundColor: 'grey' }}>
+    <>
+    {logged ? (
+      <div id="app">
+      <Sidebar className='sidebar'>
         <Menu>
           <MenuItem icon={<MenuOutlinedIcon />} onClick={() => {collapseSidebar();}}style={{ textAlign: "center" }}>
             {" "}
             <h2>Admin</h2>
           </MenuItem>
-
           <MenuItem icon={<HomeOutlinedIcon />}>Home</MenuItem>
           <MenuItem icon={<PeopleOutlinedIcon />}>Team</MenuItem>
           <SubMenu icon={<HomeOutlinedIcon />} label="SubMenu">
@@ -36,11 +46,19 @@ function App() {
         </Menu>
       </Sidebar>
       <main>
-        <h1 style={{ color: "white", marginLeft: "5rem" }}>
-          React-Pro-Sidebar
+        <div className="container">  
+          <h1>
+            React
         </h1>
+      </div>
+        
       </main>
     </div>
+    ) : (
+      <Register/>
+    )}
+    
+    </>
   );
 }
 export default App;
