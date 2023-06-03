@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
+import { Link } from 'react-router-dom'
 import './Register.css'
 
 const Register = () => {
@@ -61,7 +62,7 @@ const Register = () => {
                             <img src="images/hello.svg" alt="Register image" className='img-fluid' />
                         </div>
                         <div className="col-12" id='link-container'>
-                            <a href="register">Eu já tenho conta</a>
+                            <Link to="/login">Eu já tenho conta</Link>
                         </div>
                     </div>
                 </div>

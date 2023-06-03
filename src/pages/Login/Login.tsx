@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import './Login.css'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Register from '../Register/Register';
 
 const Login = () => {
 
@@ -11,10 +13,9 @@ const Login = () => {
   },[])
   
   return (
-    <>  
+    <>           
       <div className="container col-11 col-sm-9" id='form-container'>
         <div className="row align-items-center gx-5">
-
           <div className="col-md-6 order-md-2">
             <h2>Faça o Login para continuar</h2>
             <form >
@@ -35,11 +36,11 @@ const Login = () => {
               <img src="images/sign_in.svg" alt="Entrar no Sistema" className='img-fluid' />
             </div>
             <div className="col-12" id='link-container'>
-              <a href="register">Ainda não tenho cadastro</a>
+              <Link to ="/register">Ainda não tenho cadastro</Link>
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </>
   )
 }

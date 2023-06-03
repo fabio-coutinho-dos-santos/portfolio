@@ -6,5 +6,19 @@
 .sidebar{
   height: 100vh;
   background-color: #6c63ff;
+  color: #000;
 }
 
+.link{
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover{
+  color: #6c63ff;
+  background: black;
+}
+
+.link:focus{
+  color: black;
+}
