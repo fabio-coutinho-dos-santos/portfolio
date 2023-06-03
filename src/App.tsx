@@ -14,7 +14,7 @@ import { useSetBodyColor } from './hooks/useSetBodyColor';
 import Register from './pages/Register/Register';
 function App() {
   const { collapseSidebar } = useProSidebar();
-  const logged = false
+  const logged = true
 
   const {setBodyColor} = useSetBodyColor()
 
