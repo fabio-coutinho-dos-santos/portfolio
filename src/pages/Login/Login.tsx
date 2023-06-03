@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Login.css'
-import { useSetBodyColor } from '../hooks/useSetBodyColor'
+import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 
 const Login = () => {
 
@@ -30,14 +30,14 @@ const Login = () => {
             </form>
           </div>
 
-        <div className="col-md-6 order-md-1">
-          <div className="col-12">
-            <img src="images/sign_in.svg" alt="Entrar no Sistema" className='img-fluid' />
+          <div className="col-md-6 order-md-1">
+            <div className="col-12">
+              <img src="images/sign_in.svg" alt="Entrar no Sistema" className='img-fluid' />
+            </div>
+            <div className="col-12" id='link-container'>
+              <a href="register">Ainda não tenho cadastro</a>
+            </div>
           </div>
-          <div className="col-12" id='link-container'>
-            <a href="register">Ainda não tenho cadastro</a>
-          </div>
-        </div>
         </div>
       </div>
     </>

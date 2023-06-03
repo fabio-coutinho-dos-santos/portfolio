@@ -8,9 +8,10 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { Menu, MenuItem, Sidebar, SubMenu, useProSidebar } from 'react-pro-sidebar';
 import Login
- from './pages/Login';
+ from './pages/Login/Login';
 import { useEffect } from 'react';
 import { useSetBodyColor } from './hooks/useSetBodyColor';
+import Register from './pages/Register/Register';
 function App() {
   const { collapseSidebar } = useProSidebar();
   const logged = false
@@ -54,7 +55,7 @@ function App() {
       </main>
     </div>
     ) : (
-      <Login/>
+      <Register/>
     )}
     
     </>

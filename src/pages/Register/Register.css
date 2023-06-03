@@ -1,0 +1,84 @@
+#form-container{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: .5px 10px 15px rgb(0,0,0,.2);
+    margin-top: 25px auto;
+    padding: 25px
+}
+
+
+#form-container h2{
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+#form-container .form-control{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+}
+
+#form-container .form-control:focus{
+    box-shadow: none;
+}
+
+#form-container .form-floating label{
+    color: #ccc
+}
+
+#form-container .form-control:focus~label{
+    color: #222;
+}
+
+#form-container input[type='submit']{
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+
+#form-container input[type='checkbox']:checked{
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+
+#form-container a{
+    color: #222;
+}
+
+#form-container a:hover{
+    color: #6c63ff;
+}
+
+.btn.btn-primary{
+    margin-top: 25px;
+    width: 100%;
+}
+
+.col-sm-6.order-md-2{
+    padding: 50px;
+}
+
+#link-container{
+    text-align: center;
+    padding: 50px;
+}
+
+#form-container .form-check-input:focus{
+    box-shadow: none;
+}
+
+@media(min-width: 768px){
+    .btn.btn-primary{
+        width: auto;
+    }
+
+    #form-container{
+        padding: 50px;
+        margin: 50px auto;
+    }
+
+    .col-sm-6.order-md-2{
+        padding: 0;
+    }
+
+
+}
