@@ -13,7 +13,7 @@
   margin: 30px auto 30px auto;
   height: var(--avatarH);
   width: 80%;
-  background-image: url('/home/fabio/personal-projects/portfolio/public/images/photo.jpg');
+  background-image: url('/public/images/photo.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
