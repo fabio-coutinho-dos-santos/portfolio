@@ -5,10 +5,6 @@
 
 .sidebar{
   height: 100vh;
-  background-color: aqua;
+  background-color: grey;
 }
 
-main h1{
-  color: black;
-  margin-left: 100px;
-}
