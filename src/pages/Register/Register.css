@@ -31,13 +31,13 @@
 }
 
 #form-container input[type='submit']{
-    background-color: #6c63ff;
-    border-color: #6c63ff;
+    background-color: #01579b;
+    border-color: #01579b;
 }
 
 #form-container input[type='checkbox']:checked{
-    background-color: #6c63ff;
-    border-color: #6c63ff;
+    background-color: #01579b;
+    border-color: #01579b;
 }
 
 #form-container a{
@@ -45,7 +45,7 @@
 }
 
 #form-container a:hover{
-    color: #6c63ff;
+    color: #01579b;
 }
 
 .btn.btn-primary{
