@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
@@ -9,38 +7,78 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { Menu, MenuItem, Sidebar, SubMenu, useProSidebar } from 'react-pro-sidebar';
+import Login from './pages/Login/Login'
+import { useEffect, useState } from 'react';
+import { useSetBodyColor } from './hooks/useSetBodyColor';
+import Register from './pages/Register/Register';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Projects from './pages/Projects/Projects';
+import { useLocalStorage } from './hooks/useLocalStorage';
+import { StorageKeys } from './helpers/StorageKeys';
 
 function App() {
   const { collapseSidebar } = useProSidebar();
 
-  return (
-    <div id="app" style={({ display: "flex" })}>
-      <Sidebar style={{ height: "100vh", backgroundColor: 'grey' }}>
-        <Menu>
-          <MenuItem icon={<MenuOutlinedIcon />} onClick={() => {collapseSidebar();}}style={{ textAlign: "center" }}>
-            {" "}
-            <h2>Admin</h2>
-          </MenuItem>
+  const {setBodyColor} = useSetBodyColor()
+  const {getItem, setItem} = useLocalStorage()
+  const [logged, setLogged] = useState(false)
 
-          <MenuItem icon={<HomeOutlinedIcon />}>Home</MenuItem>
-          <MenuItem icon={<PeopleOutlinedIcon />}>Team</MenuItem>
-          <SubMenu icon={<HomeOutlinedIcon />} label="SubMenu">
-              <MenuItem icon={<PeopleOutlinedIcon />}>Item 1</MenuItem>
-              <MenuItem icon={<PeopleOutlinedIcon />}>Item 2</MenuItem>
-              <MenuItem icon={<PeopleOutlinedIcon />}>Item 3</MenuItem>
-            </SubMenu>
-          <MenuItem icon={<ContactsOutlinedIcon />}>Contacts</MenuItem>
-          <MenuItem icon={<ReceiptOutlinedIcon />}>Profile</MenuItem>
-          <MenuItem icon={<HelpOutlineOutlinedIcon />}>FAQ</MenuItem>
-          <MenuItem icon={<CalendarTodayOutlinedIcon />}>Calendar</MenuItem>
-        </Menu>
-      </Sidebar>
-      <main>
-        <h1 style={{ color: "white", marginLeft: "5rem" }}>
-          React-Pro-Sidebar
-        </h1>
-      </main>
+  useEffect(()=>{
+    setBodyColor("#ffffff")
+    // setItem(StorageKeys.ACCESS_TOKEN, '')
+    const token: any = getItem(StorageKeys.ACCESS_TOKEN);
+    console.log(token)
+    token ? setLogged(true) : setLogged(false)
+    console.log(logged)
+  },[])
+
+  // const logged = false
+
+  return (
+    <>
+    {logged ? (
+      <div id="app">
+        <BrowserRouter>
+          <Sidebar className='sidebar'>
+            <Menu>
+              <MenuItem icon={<MenuOutlinedIcon />} onClick={() => {collapseSidebar();}}style={{ textAlign: "center" }}>
+                {" "}
+                {/* <h2>Admin</h2> */}
+              </MenuItem>
+              <Link to={'/home'} className='link'><MenuItem className='icon' icon={<HomeOutlinedIcon />}>Home</MenuItem></Link>
+              <Link to={'/about'} className='link'><MenuItem icon={<PeopleOutlinedIcon />}>About</MenuItem></Link>
+              <Link to={'/projects'} className='link'><MenuItem icon={<ContactsOutlinedIcon />}>Projects</MenuItem></Link>
+              {/* <SubMenu icon={<HomeOutlinedIcon />} label="SubMenu">
+                  <MenuItem icon={<PeopleOutlinedIcon />}>Item 1</MenuItem>
+                  <MenuItem icon={<PeopleOutlinedIcon />}>Item 2</MenuItem>
+                  <MenuItem icon={<PeopleOutlinedIcon />}>Item 3</MenuItem>
+                </SubMenu>
+              <MenuItem icon={<ContactsOutlinedIcon />}>Contacts</MenuItem>
+              <MenuItem icon={<ReceiptOutlinedIcon />}>Profile</MenuItem>
+              <MenuItem icon={<HelpOutlineOutlinedIcon />}>FAQ</MenuItem>
+              <MenuItem icon={<CalendarTodayOutlinedIcon />}>Calendar</MenuItem> */}
+            </Menu>
+          </Sidebar>
+          <Routes>
+          <Route path='/home' Component={Home}></Route>
+          <Route path='/' Component={Home}></Route>
+          <Route path='/about' Component={About}></Route>
+          <Route path='/projects' Component={Projects}></Route>
+        </Routes>
+        </BrowserRouter>
     </div>
+    ) : (
+      <BrowserRouter>
+        <Routes>
+            <Route path='/login' Component={Login}></Route>
+            <Route path='/register' Component={Register}></Route>
+        </Routes>
+      </BrowserRouter>
+    )}
+    
+    </>
   );
 }
 export default App;
