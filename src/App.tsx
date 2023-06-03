@@ -28,7 +28,7 @@ function App() {
 
   useEffect(()=>{
     toggle()
-    maximizeAvatar()
+    minimizeAvatar();
     setBodyColor("#ffffff")
     document.documentElement.style.setProperty('--avatarH', avatarH)
     const token: any = getItem(StorageKeys.ACCESS_TOKEN);
