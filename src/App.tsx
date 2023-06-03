@@ -27,7 +27,7 @@ function App() {
 
   useEffect(()=>{
     setBodyColor("#ffffff")
-    // setItem(StorageKeys.ACCESS_TOKEN, '')
+    setItem(StorageKeys.ACCESS_TOKEN, '')
     const token: any = getItem(StorageKeys.ACCESS_TOKEN);
     console.log(token)
     token ? setLogged(true) : setLogged(false)
