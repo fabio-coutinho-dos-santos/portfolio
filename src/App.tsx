@@ -28,7 +28,7 @@ function App() {
 
   useEffect(()=>{
     toggle()
-    minimizeAvatar()
+    maximizeAvatar()
     setBodyColor("#ffffff")
     document.documentElement.style.setProperty('--avatarH', avatarH)
     const token: any = getItem(StorageKeys.ACCESS_TOKEN);
@@ -42,11 +42,11 @@ function App() {
     if (toggled) {
       console.log(toggled)
       collapseSidebar();
-      minimizeAvatar();
+      maximizeAvatar();
     } else {
       console.log(toggled)
       collapseSidebar();
-      maximizeAvatar();
+      minimizeAvatar();
     }
   };
 
