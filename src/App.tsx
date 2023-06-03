@@ -8,23 +8,33 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { Menu, MenuItem, Sidebar, SubMenu, useProSidebar } from 'react-pro-sidebar';
 import Login from './pages/Login/Login'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSetBodyColor } from './hooks/useSetBodyColor';
 import Register from './pages/Register/Register';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Projects from './pages/Projects/Projects';
+import { useLocalStorage } from './hooks/useLocalStorage';
+import { StorageKeys } from './helpers/StorageKeys';
 
 function App() {
   const { collapseSidebar } = useProSidebar();
-  const logged = false
 
   const {setBodyColor} = useSetBodyColor()
+  const {getItem, setItem} = useLocalStorage()
+  const [logged, setLogged] = useState(false)
 
   useEffect(()=>{
     setBodyColor("#ffffff")
+    // setItem(StorageKeys.ACCESS_TOKEN, '')
+    const token: any = getItem(StorageKeys.ACCESS_TOKEN);
+    console.log(token)
+    token ? setLogged(true) : setLogged(false)
+    console.log(logged)
   },[])
+
+  // const logged = false
 
   return (
     <>
@@ -53,9 +63,9 @@ function App() {
           </Sidebar>
           <Routes>
           <Route path='/home' Component={Home}></Route>
+          <Route path='/' Component={Home}></Route>
           <Route path='/about' Component={About}></Route>
           <Route path='/projects' Component={Projects}></Route>
-          
         </Routes>
         </BrowserRouter>
     </div>
