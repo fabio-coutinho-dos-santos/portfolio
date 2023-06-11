@@ -1,0 +1,89 @@
+#card-about-container{
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: .5px 10px 15px rgb(0,0,0,.2);
+    margin: 50px auto ;
+    height: 55vh;
+    padding: 25px
+}
+
+@media(max-width:768px){
+    #card-about-container{
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: .5px 10px 15px rgb(0,0,0,.2);
+        margin: 50px auto ;
+        height: 80vh;
+        padding: 25px
+    }
+ }
+
+#avatar{
+    margin: 0px auto 30px auto;
+    height: 40vh;
+    width: 80%;
+    background-image: url('/public/images/photo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    /* border-radius: 50%; */
+    box-shadow: 15px 10px 15px rgba(0,0,0,.2);
+  }
+
+#card-about-container h3{
+    font-size: 1.5rem;
+    margin-top:20px;
+    text-align: center;
+}
+
+#icons{
+    font-size: 2rem;
+    text-align: center;
+}
+
+#icons #linkedin{
+    color: #0077B5;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#icons #github{
+    color: black;
+    cursor: pointer;
+}
+
+#card-about-container h2{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#card-about-container .btn.btn-primary{
+    width: 70%;
+}
+
+#card-about-container input[type="button"]{
+    background-color: #0D47A1;
+}
+
+#who{
+    text-align: center;
+}
+
+#who p{
+    font-size: 1.3rem;
+}
+
+#who #trace{
+    width: 10%;
+    background-color: #0D47A1;
+    height: 2px;
+}
+
+#who #trace-final{
+    width: 10%;
+    background-color: #0D47A1;
+    height: 2px;
+}
