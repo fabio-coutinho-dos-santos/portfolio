@@ -2,12 +2,16 @@ import './About.css'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import  CardSkills  from '../../Components/CardSkills/CardSkills'
-import { BsWindowFullscreen } from "react-icons/bs"
+import { BsJournalBookmark, BsWindowFullscreen } from "react-icons/bs"
 import { RiListSettingsLine } from "react-icons/ri"
 import { BsCloud } from "react-icons/bs"
 import { BsTools } from "react-icons/bs"
 import { BsDatabase } from "react-icons/bs"
 import { TbBrandDocker } from "react-icons/tb"
+import { GrAchievement } from "react-icons/gr"
+import { GiAchievement } from "react-icons/gi"
+import { LuMedal } from "react-icons/lu"
+
 
 type Props = {}
 
@@ -72,13 +76,79 @@ const About = (props: Props) => {
             <div className="row justify-content-center" id='skills'>
                 <h1>Main Skills</h1>
                 <div className="row justify-content-center mb-5"><div id="trace"></div></div>
-                    <CardSkills title='Frontend' textOne='HTML CSS Laravel' textTwo='Angular React Bootstrap' icon={<BsWindowFullscreen/>}/>
-                    <CardSkills title='Backend' textOne='NodeJs Express NestJs' textTwo='PHP Laravel Python REST' icon={<RiListSettingsLine/>}/>
-                    <CardSkills title='Cloud' textOne='GCP Cloud-Run' textTwo='Functions PubSub Build' icon={<BsCloud/>}/>
-                    <CardSkills title='Databases' textOne='MySql' textTwo='MongoDb' icon={<BsDatabase/>}/>
-                    <CardSkills title='Containers & Ci-Cd' textOne='Docker Docker-Compose K8s' textTwo=' Cloud-Build Triggers' icon={<TbBrandDocker/>}/>
-                    <CardSkills title='Tools' textOne='Swagger Postman Jira' textTwo='Nginx Git Trello' icon={<BsTools/>}/>
+                <CardSkills title='Frontend' textOne='HTML CSS Laravel' textTwo='Angular React Bootstrap' icon={<BsWindowFullscreen/>}/>
+                <CardSkills title='Backend' textOne='NodeJs Express NestJs' textTwo='PHP Laravel Python REST' icon={<RiListSettingsLine/>}/>
+                <CardSkills title='Cloud' textOne='GCP Cloud-Run' textTwo='Functions PubSub Build' icon={<BsCloud/>}/>
+                <CardSkills title='Databases' textOne='MySql' textTwo='MongoDb' icon={<BsDatabase/>}/>
+                <CardSkills title='Containers & Ci-Cd' textOne='Docker Docker-Compose K8s' textTwo=' Cloud-Build Triggers' icon={<TbBrandDocker/>}/>
+                <CardSkills title='Tools' textOne='Swagger Postman Jira' textTwo='Nginx Git Trello' icon={<BsTools/>}/>
             </div>
+
+            <div className="row justify-content-center mt-5 gx-5" >
+                <div className="col-lg-6" id='background-text'>
+                    <div className="py-5">
+                    <h1>Academic Background</h1>
+                    <div className="row justify-content-start mb-5"><div id="trace"></div></div>
+                    <ul className="timeline-with-icons">
+                        <li className="timeline-item mb-5">
+                            <span className="timeline-icon">
+                               <GrAchievement/>
+                            </span>
+                            <h5 className="fw-bold">Master's in Computer Science</h5>
+                            <p className="text-muted mb-2 fw-bold">2019 - 2022</p>
+                            <p className="text-muted">
+                                Emphasis in Software Engineering and Computer Systems<br></br>
+                                Pontifícia Universidade Católica de Minas Gerais
+                            </p>
+                        </li>
+
+                        <li className="timeline-item mb-5">
+                            <span className="timeline-icon">
+                                <BsJournalBookmark/>
+                            </span>
+                            <h5 className="fw-bold">Published Works</h5>
+                            <b>2023 - </b><a href='https://sol.sbc.org.br/index.php/courb/article/view/24579' className="text-muted">
+                                IoTSafe: Attack Detection Based on Deep Neural Networks 
+                            </a><br></br>
+                            <b>2021 - </b><a href='https://sol.sbc.org.br/index.php/wcga/article/view/17121' className="text-muted">
+                                IoTSafe - An Architecture based on Fog Computing to Provide IoT Security 
+                            </a><br></br>
+                            <b>2020 - </b><a href='https://dl.acm.org/doi/abs/10.1145/3428658.3431082' className="text-muted">
+                                Understanding the Performance Impacts Of Cross-Platform Development On IoT Applications
+                            </a>
+                        </li>
+                        
+                        <li className="timeline-item mb-5">
+                            <span className="timeline-icon">
+                                <GiAchievement/>
+                            </span>
+                            <h5 className="fw-bold">Degree in Computer Engineering</h5>
+                            <p className="text-muted mb-2 fw-bold">2013 - 2018</p>
+                            <p className="text-muted">
+                                Pontifícia Universidade Católica de Minas Gerais
+                            </p>
+                        </li>
+
+                        <li className="timeline-item mb-5">
+                            <span className="timeline-icon">
+                                <LuMedal/>
+                            </span>
+                            <h5 className="fw-bold">Awards</h5>
+                            <p className="text-muted mb-2 fw-bold">2018</p>
+                            <p className="text-muted">
+                                Graduation Gold Medal<br></br>
+                                Highest grade point average of the
+                                Computer Engineering Undergraduate
+                                class close to 91
+                            </p>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <div className="col-lg-6 mt-4" id='background'></div>
+
+            </div>
+
         </div>
         
         </>
