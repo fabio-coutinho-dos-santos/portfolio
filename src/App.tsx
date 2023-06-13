@@ -18,6 +18,7 @@ import About from './pages/About/About';
 import Projects from './pages/Projects/Projects';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { StorageKeys } from './helpers/StorageKeys';
+import { FaArrowUp } from 'react-icons/fa'
 
 function App() {
   const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
@@ -25,11 +26,12 @@ function App() {
   const {getItem, setItem} = useLocalStorage()
   const [logged, setLogged] = useState(false)
   const [avatarH, setAvatarH] = useState('200px')
+  const [pageTitle, setPageTitle] = useState('Home')
 
   useEffect(()=>{
     toggle()
     minimizeAvatar();
-    setBodyColor("#ffffff")
+    setBodyColor("whitesmoke")
     document.documentElement.style.setProperty('--avatarH', avatarH)
     const token: any = getItem(StorageKeys.ACCESS_TOKEN);
     console.log(token)
@@ -67,58 +69,50 @@ function App() {
     document.documentElement.style.setProperty('--avatarH', avatarH)
   }
 
-
-
-  // const showSidebar = () => {
-  //   setDisplayType('block')
-  //   collapseSidebar();
-  // }
-
-  // const logged = false
-
   return (
-    <>
-    {logged ? (
-      <div id="app">
+      <>
         <BrowserRouter>
-          <Sidebar className='sidebar' backgroundColor='' breakPoint="sm">
-            <Menu>
-              <MenuItem className='collapse-btn' icon={<MenuOutlinedIcon/>} onClick={() => {toggle();}}></MenuItem>
-              <div className='avatar'>
+        {!logged ? (
+          <>
+            <Routes>
+              <Route path='/login' Component={Login}></Route>
+              <Route path='/register' Component={Register}></Route>
+            </Routes>
+          </>) : (
+          <div id='app'>
+              <Sidebar className='sidebar' backgroundColor='' breakPoint="sm">
+                <Menu>
+                  <MenuItem className='collapse-btn' icon={<MenuOutlinedIcon/>} onClick={() => {toggle();}}>
+                  {" "}
+                  <h2>{pageTitle}</h2>
+                  </MenuItem>
+                  {/* <div className='avatar d-none d-lg-block'/> */}
+                  <Link to={'/home'} className='link'><MenuItem  onClick={()=>{ broken && toggle(); setPageTitle('Home')}} className='icon' icon={<HomeOutlinedIcon />}>Home</MenuItem></Link>
+                  <Link to={'/about'} className='link'><MenuItem onClick={()=>{ broken && toggle(); setPageTitle('About')}} icon={<PeopleOutlinedIcon />}>About</MenuItem></Link>
+                  <Link to={'/projects'} className='link'><MenuItem onClick={()=>{ broken && toggle(); setPageTitle('Projects')}} icon={<ContactsOutlinedIcon />}>Projects</MenuItem></Link>
+                  <Link to={'/login'} className='link'><MenuItem onClick={exit} icon={<ExitToAppIcon />}>Exit</MenuItem></Link>
+                </Menu>
+              </Sidebar>
+              <div className="navbar d-lg-none">
+                {broken &&
+                  <div className="icon-sidebar" onClick={()=>{toggle()}}>
+                    <MenuOutlinedIcon className='position-absolute top-0 start-0'/>
+                  </div>
+                }
+                <div>
+                  <ExitToAppIcon onClick={exit} className='position-absolute top-0 end-0'/>
+                </div>
               </div>
-              <Link to={'/home'} className='link'><MenuItem onClick={()=>{ broken && toggle()}} className='icon' icon={<HomeOutlinedIcon />}>Home</MenuItem></Link>
-              <Link to={'/about'} className='link'><MenuItem onClick={()=>{ broken && toggle()}} icon={<PeopleOutlinedIcon />}>About</MenuItem></Link>
-              <Link to={'/projects'} className='link'><MenuItem onClick={()=>{ broken && toggle()}} icon={<ContactsOutlinedIcon />}>Projects</MenuItem></Link>
-              <Link to={'/login'} className='link'><MenuItem onClick={exit} icon={<ExitToAppIcon />}>Exit</MenuItem></Link>
-            </Menu>
-          </Sidebar>
-          <div className="navbar">
-            {broken &&
-                <div className="icon-sidebar" onClick={()=>{toggle()}}>
-                 <MenuOutlinedIcon className='position-absolute top-0 start-0'/>
-              </div>
-            }
-            <div>
-              <ExitToAppIcon onClick={exit} className='position-absolute top-0 end-0'/>
-            </div>
-          </div>
-          <Routes>
-          <Route path='/home' Component={Home}></Route>
-          <Route path='/login' Component={Home}></Route>
-          <Route path='/about' Component={About}></Route>
-          <Route path='/projects' Component={Projects}></Route>
-        </Routes>
+              <Routes>
+              <Route path='/home' Component={Home}></Route>
+              <Route path='/login' Component={Home}></Route>
+              <Route path='/about' Component={About}></Route>
+              <Route path='/projects' Component={Projects}></Route>
+            </Routes>
+              <div className='btn-end position-fixed bottom-0 end-0' onClick={()=>{window.scrollTo(0, 0)}}><FaArrowUp id="icon-arrow"/></div>
+          </div>          
+        )}
         </BrowserRouter>
-    </div>
-    ) : (
-      <BrowserRouter>
-        <Routes>
-            <Route path='/login' Component={Login}></Route>
-            <Route path='/register' Component={Register}></Route>
-        </Routes>
-      </BrowserRouter>
-    )}
-    
     </>
   );
 }
