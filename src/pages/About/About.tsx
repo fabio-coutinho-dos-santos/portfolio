@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react'
 import './About.css'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import Tag from '../../Components/Tag';
-import { useRef } from 'react';
+import  CardSkills  from '../../Components/CardSkills/CardSkills'
+import { BsWindowFullscreen } from "react-icons/bs"
+import { RiListSettingsLine } from "react-icons/ri"
+import { BsCloud } from "react-icons/bs"
+import { BsTools } from "react-icons/bs"
+import { BsDatabase } from "react-icons/bs"
+import { TbBrandDocker } from "react-icons/tb"
 
 type Props = {}
 
@@ -13,7 +17,7 @@ const About = (props: Props) => {
         <>
         <div className="col-12 container">
             <div className="row">
-                <div className="container col-12 col-sm-10" id='card-about-container'>
+                <div className="container col-12 col-sm-12" id='card-about-container'>
                     <div className="row justify-content-center align-items-start mt-5 gx-5">
                         <div className="col-lg-6">
                             <div id="avatar"></div>            
@@ -65,12 +69,20 @@ const About = (props: Props) => {
                     </div>
                     <div className="row justify-content-end"><div id="trace"></div></div>
             </div>
+            <div className="row justify-content-center" id='skills'>
+                <h1>Main Skills</h1>
+                <div className="row justify-content-center mb-5"><div id="trace"></div></div>
+                    <CardSkills title='Frontend' textOne='HTML CSS Laravel' textTwo='Angular React Bootstrap' icon={<BsWindowFullscreen/>}/>
+                    <CardSkills title='Backend' textOne='NodeJs Express NestJs' textTwo='PHP Laravel Python REST' icon={<RiListSettingsLine/>}/>
+                    <CardSkills title='Cloud' textOne='GCP Cloud-Run' textTwo='Functions PubSub Build' icon={<BsCloud/>}/>
+                    <CardSkills title='Databases' textOne='MySql' textTwo='MongoDb' icon={<BsDatabase/>}/>
+                    <CardSkills title='Containers & Ci-Cd' textOne='Docker Docker-Compose K8s' textTwo=' Cloud-Build Triggers' icon={<TbBrandDocker/>}/>
+                    <CardSkills title='Tools' textOne='Swagger Postman Jira' textTwo='Nginx Git Trello' icon={<BsTools/>}/>
+            </div>
         </div>
         
         </>
       )
-
-      {/*    */}
 }
 
 export default About

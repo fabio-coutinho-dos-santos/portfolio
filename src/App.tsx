@@ -31,7 +31,7 @@ function App() {
   useEffect(()=>{
     toggle()
     minimizeAvatar();
-    setBodyColor("#ffffff")
+    setBodyColor("whitesmoke")
     document.documentElement.style.setProperty('--avatarH', avatarH)
     const token: any = getItem(StorageKeys.ACCESS_TOKEN);
     console.log(token)
