@@ -18,6 +18,7 @@ import About from './pages/About/About';
 import Projects from './pages/Projects/Projects';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { StorageKeys } from './helpers/StorageKeys';
+import { FaArrowUp } from 'react-icons/fa'
 
 function App() {
   const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
@@ -86,13 +87,13 @@ function App() {
                   <h2>{pageTitle}</h2>
                   </MenuItem>
                   {/* <div className='avatar d-none d-lg-block'/> */}
-                  <Link to={'/home'} className='link'><MenuItem onClick={()=>{ broken && toggle(); setPageTitle('Home')}} className='icon' icon={<HomeOutlinedIcon />}>Home</MenuItem></Link>
+                  <Link to={'/home'} className='link'><MenuItem  onClick={()=>{ broken && toggle(); setPageTitle('Home')}} className='icon' icon={<HomeOutlinedIcon />}>Home</MenuItem></Link>
                   <Link to={'/about'} className='link'><MenuItem onClick={()=>{ broken && toggle(); setPageTitle('About')}} icon={<PeopleOutlinedIcon />}>About</MenuItem></Link>
                   <Link to={'/projects'} className='link'><MenuItem onClick={()=>{ broken && toggle(); setPageTitle('Projects')}} icon={<ContactsOutlinedIcon />}>Projects</MenuItem></Link>
                   <Link to={'/login'} className='link'><MenuItem onClick={exit} icon={<ExitToAppIcon />}>Exit</MenuItem></Link>
                 </Menu>
               </Sidebar>
-              <div className="navbar">
+              <div className="navbar d-lg-none">
                 {broken &&
                   <div className="icon-sidebar" onClick={()=>{toggle()}}>
                     <MenuOutlinedIcon className='position-absolute top-0 start-0'/>
@@ -108,6 +109,7 @@ function App() {
               <Route path='/about' Component={About}></Route>
               <Route path='/projects' Component={Projects}></Route>
             </Routes>
+              <div className='btn-end position-fixed bottom-0 end-0' onClick={()=>{window.scrollTo(0, 0)}}><FaArrowUp id="icon-arrow"/></div>
           </div>          
         )}
         </BrowserRouter>
