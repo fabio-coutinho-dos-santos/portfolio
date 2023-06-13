@@ -1,19 +1,27 @@
 #app{
-  height: 100vh;
+  height: auto;
   display: flex;
+  min-height: 100vh;
 }
 
 .sidebar{
-  height: 100vh;
-  background-color: #01579b;
+  height: auto;
+  position: fixed;
+  min-height: 100vh;
+  background-color: #0D47A1;
   color: #000;
+}
+
+.sidebar h2{
+  font-size: 1.5rem;
+  margin: 5px;
 }
 
 .avatar{
   margin: 30px auto 30px auto;
   height: var(--avatarH);
   width: 80%;
-  background-image: url('/home/fabio/personal-projects/portfolio/public/images/photo.jpg');
+  background-image: url('/public/images/photo.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,7 +35,7 @@
 }
 
 .collapse-btn:hover{
-  color: #01579b;
+  color: #0D47A1;
 }
 
 .link{
@@ -36,7 +44,7 @@
 }
 
 .link:hover{
-  color: #01579b;
+  color: #0D47A1;
   background: black;
 }
 
@@ -56,14 +64,38 @@
   cursor: pointer;
 }
 
-
-
 .navbar{
   position: fixed;
   height: 3rem;
   width: 100%;
-  background-color: #01579b
-;
+  background-color: #0D47A1;
+  z-index: 9999;
 }
 
+.btn-end{
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #0D47A1;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: 15px 10px 15px rgba(0,0,0,.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
 
+.btn-end #icon-arrow{
+  color: white;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.btn-end:hover{
+  transform: translate(0, -5px);
+  /* rotate: y 180deg; */
+  background-color: #0077B5;
+  scale: 1.1;
+}
