@@ -31,15 +31,26 @@
     text-align: center;
 }
 
+
 #icons #linkedin{
     color: #0077B5;
     margin-right: 15px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 #icons #github{
     color: black;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+#icons #linkedin:hover{
+    scale:1.2;
+}
+
+#icons #github:hover{
+    scale:1.2;
 }
 
 #card-about-container h2{
