@@ -54,7 +54,8 @@ function App() {
 
   const exit = () =>{
     setItem(StorageKeys.ACCESS_TOKEN, '')
-    window.location.reload()
+    setLogged(false);
+    // window.location.reload()
   }
 
   const minimizeAvatar = () =>{
