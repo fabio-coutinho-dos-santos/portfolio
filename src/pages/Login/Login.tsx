@@ -11,7 +11,8 @@ const Login = () => {
   const {setBodyColor} = useSetBodyColor()
 
   useEffect(()=>{
-    setBodyColor("#F8F8F8F8")
+    setBodyColor("#CFD8DC")
+    // setBodyColor("#F8F8F8F8")
   },[])
 
   const{setItem, getItem} = useLocalStorage();
