@@ -12,6 +12,9 @@ import { GrAchievement } from "react-icons/gr"
 import { GiAchievement } from "react-icons/gi"
 import { LuMedal } from "react-icons/lu"
 
+const downloadResume = () => {
+    window.location.href = "/documents/cv.pdf"
+}
 
 type Props = {}
 
@@ -36,7 +39,7 @@ const About = (props: Props) => {
                                 <FaGithub id='github' onClick={()=>{window.open('https://github.com/fabio-coutinho-dos-santos')}}/>
                             </div>
                             <div className="row justify-content-center">
-                                <input type="button" className='btn btn-primary mt-5' value={"Download Resume"} />
+                                <input type="button" onClick={downloadResume} className='btn btn-primary mt-5' value={"Download Resume"} />
                             </div>
                         </div>
                     </div>
@@ -145,7 +148,7 @@ const About = (props: Props) => {
                     </ul>
                     </div>
                 </div>
-                <div className="col-lg-6 mt-4" id='background'></div>
+                <div className="col-lg-6 mt-5 d-none d-lg-block" id='background'></div>
 
             </div>
 

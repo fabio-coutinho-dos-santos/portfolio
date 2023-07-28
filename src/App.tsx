@@ -81,7 +81,7 @@ function App() {
             </Routes>
           </>) : (
           <div id='app'>
-              <Sidebar className='sidebar position-fixed' backgroundColor='' breakPoint="sm">
+              <Sidebar className='sidebar position-fixed' width='200px' backgroundColor='' breakPoint="sm">
                 <Menu>
                   <MenuItem className='collapse-btn' icon={<MenuOutlinedIcon/>} onClick={() => {toggle();}}>
                   {" "}

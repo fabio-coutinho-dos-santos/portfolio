@@ -83,7 +83,7 @@
 }
 
 #who p{
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 #who #trace{
@@ -161,6 +161,12 @@
   font-size: 1.3rem;
   align-items: center;
   justify-content: center;
+}
+
+#download-button {
+    text-align: center;
+    align-items: center;
+    margin-left: 100px;
 }
 
 @media(max-width:768px){
