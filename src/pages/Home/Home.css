@@ -1,0 +1,11 @@
+.container-fluid {
+  margin: 0;
+}
+
+.card-content {
+  background-color: aliceblue;
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 15px 10px 15px rgba(0,0,0,.2);
+}

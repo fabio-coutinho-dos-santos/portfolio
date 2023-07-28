@@ -9,7 +9,8 @@
   z-index: 999;
   position: sticky;
   min-height: 100vh;
-  background-color: #0D47A1;
+  background-color: #263238
+  ;
   color: #000;
 }
 
@@ -70,14 +71,14 @@
   position: fixed;
   height: 3rem;
   width: 100%;
-  background-color: #0D47A1;
+  background-color: #263238;
   z-index: 9999;
 }
 
 .btn-end{
   height: 2.5rem;
   width: 2.5rem;
-  background-color: #0D47A1;
+  background-color: #263238;
   border-radius: 50%;
   margin-right: 20px;
   margin-bottom: 20px;
