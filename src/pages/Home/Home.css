@@ -1,11 +1,32 @@
-.container-fluid {
-  margin: 0;
+.container-main {
+  margin-bottom: 80px;
 }
-
 .card-content {
   background-color: aliceblue;
   width: 100%;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 15px 10px 15px rgba(0,0,0,.2);
+}
+
+.social-media .icons {
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  font-size: 4rem;
+  margin-right: 15px;
+  color: gray;
+}
+
+.skill {
+  margin-top: 20px;
+  font-size: 4rem;
+  margin-right: 15px;
+  color: gray;
+}
+
+.skill:hover {
+  color: #263238;
+  scale: 1.1;
+  transition: 0.5s;
 }

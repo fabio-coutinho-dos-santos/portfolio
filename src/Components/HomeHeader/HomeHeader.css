@@ -3,6 +3,7 @@
   background-color: whitesmoke;
   margin: 0px;
   overflow: hidden;
+  box-shadow: 0.5px 10px 15px grey;
 }
 
 .header #header-container {
@@ -26,7 +27,8 @@
   #header-container #avatar {
     text-align: center;
     margin-top: 80px;
-    width: 50%;
+    width: 200px;
+    height: 200px;
   }
 
   #name{
