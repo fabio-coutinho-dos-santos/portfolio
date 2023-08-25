@@ -78,7 +78,8 @@
 .btn-end{
   height: 2.5rem;
   width: 2.5rem;
-  background-color: #263238;
+  background-color: none;
+  border: 1px solid #263238;
   border-radius: 50%;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -91,7 +92,7 @@
 }
 
 .btn-end #icon-arrow{
-  color: white;
+  color: #263238;
   font-size: 1.3rem;
   position: relative;
 }
@@ -99,6 +100,14 @@
 .btn-end:hover{
   transform: translate(0, -5px);
   /* rotate: y 180deg; */
-  background-color: #0077B5;
+  background-color: #263238;
+  border-color: #263238;
   scale: 1.1;
+  color: white;
+}
+
+.btn-end #icon-arrow:hover{
+  color: #fff;
+  font-size: 1.3rem;
+  position: relative;
 }

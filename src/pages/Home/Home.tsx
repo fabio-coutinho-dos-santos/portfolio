@@ -116,7 +116,7 @@ const Home = () => {
                   Page for the completion of anamnesis forms by clients, restructured to be multi-company with a new interface and functionalities. Built using NestJS and React.
                 </ProjectsItems>
 
-                <div className='see-more'><span onClick={() => navigate('/about')}>See More</span> </div>
+                <div className='see-more'><span onClick={() => navigate('/projects')}>See More</span> </div>
 
               </div>
             </div>
