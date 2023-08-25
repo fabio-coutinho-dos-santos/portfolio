@@ -20,13 +20,56 @@
 
 .skill {
   margin-top: 20px;
-  font-size: 4rem;
+  font-size: 5rem;
   margin-right: 15px;
-  color: gray;
+  color: white;
+  box-shadow: 15px 10px 15px white;
+  border-radius: 50%;
+  padding: 15px;
 }
 
 .skill:hover {
-  color: #263238;
-  scale: 1.1;
+  color: #000;
+  scale: 1.2;
   transition: 0.5s;
+}
+
+.skills-content {
+  padding: 20px;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.see-more {
+  text-align: end;
+}
+
+.see-more span{
+  color: gray;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.see-more span:hover {
+  color: #263238;
+}
+
+@media (max-width: 768px) {
+  .skills-content {
+    margin-top: 30px;
+    background-color: aliceblue;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 15px 10px 15px rgba(0,0,0,.2);
+  }
+
+  .skill {
+    margin-top: 20px;
+    font-size: 5rem;
+    margin-right: 15px;
+    color: gray;
+    border-radius: 0px;
+    padding: 5px;
+  }
 }

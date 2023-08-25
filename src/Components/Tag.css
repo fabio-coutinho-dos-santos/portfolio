@@ -1,0 +1,93 @@
+.tag{
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 40px;
+    width: 70px;
+    /* width: var(--size); */
+    width: 110px ;
+    background-color: grey;
+    border-radius: 50%;
+    box-shadow: 15px 10px 15px rgba(0,0,0,0.15);
+    color: white;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#angular{
+    color: black;
+    background-color: #ef5350;
+}
+
+#mongo{
+    color: black;
+    background-color: #81c784;
+}
+
+#mySql{
+    color: white;
+    background-color: #0077B5;
+}
+
+#php{
+    color: white;
+    background-color: #0077B5;
+}
+
+#react{
+    color: black;
+    background-color: aqua;
+}
+
+#js{
+    color: black;
+    background-color: yellow;
+}
+
+#ts{
+    color: white;
+    background-color: #0077B5;
+}
+
+#node{
+    color: black;
+    background-color: #81c784;
+}
+
+#nest{
+    color: black;
+    background-color: #ef5350;
+}
+
+#laravel{
+    color: black;
+    background-color: #ef5350;
+}
+
+#bootstrapp{
+    color: white;
+    background-color: purple;
+}
+
+#docker{
+    color: white;
+    background-color: #0077B5;
+}
+
+#nginx{
+    color: black;
+    background-color: green;
+}
+
+#git{
+    color: black;
+    background-color: #ef5350;
+}
+
+#gcp{
+    color: black;
+    background-color: yellow;
+}
+
+

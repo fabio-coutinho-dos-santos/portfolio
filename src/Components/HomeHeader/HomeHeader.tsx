@@ -13,9 +13,9 @@ const HomeHeader = () => {
             <h3>Computer Engineer</h3>
             <h5>Full Stack Developer</h5>
           </div>
-          <div className="col-sm-3 offset-3 mt-5">
+          {/* <div className="col-sm-3 offset-3 mt-5">
             <input type="button" className='btn btn-outline-secondary' value={'Contact me'}/>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
