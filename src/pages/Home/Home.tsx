@@ -13,7 +13,8 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setBodyColor('#CFD8DC')
+    setBodyColor('#ECEFF1')
+    // setBodyColor('#CFD8DC')
     // setBodyColor('#90A4AE')
     // setBodyColor('#546E7A')
     // setBodyColor('#EEE')
