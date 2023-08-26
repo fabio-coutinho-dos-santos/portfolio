@@ -1,3 +1,7 @@
+.container {
+    /* margin-left: 280px; */
+}
+
 .about-background {
     /* min-height: 50vh; */
     height: 80vh;
@@ -22,18 +26,19 @@
 
 #card-about-container{
     /* background-color: white; */
-    width: 100%;
+    margin-top: -80px;
+    /* width: 100%; */
     border-radius: 20px;
     /* box-shadow: .5px 10px 15px rgb(0,0,0,.2); */
-    margin: 50px auto ;
-    padding: 25px
+    /* margin: 50px auto ; */
+    /* padding: 25px */
 }
 
 #avatar{
-    margin: 0px auto 30px auto;
-    height: 40vh;
-    width: 65%;
-    background-image: url('/public/images/photo.jpg');
+    margin: 0px auto 0px auto;
+    height: 50vh;
+    width: 90%;
+    background-image: url('/public/images/about-image.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,12 +50,12 @@
 #card-about-container h3{
     font-size: 1.3rem;
     margin-top:25px;
-    text-align: center;
+    text-align: start;
 }
 
 #icons{
     font-size: 2rem;
-    text-align: center;
+    text-align: start;
 }
 
 
@@ -82,7 +87,8 @@
 }
 
 #card-about-container .btn.btn-primary{
-    width: 70%;
+    width: 30%;
+    margin-left: 15px;
     font-weight: bold;
     height: 2.8rem;
     /* transition: scale 0.5s ease, transform 0.5s ease 0.5s */
@@ -110,6 +116,10 @@
 }
 
 #who p{
+    font-size: 1.3rem;
+}
+
+#about p{
     font-size: 1.3rem;
 }
 
@@ -199,26 +209,28 @@
 @media(max-width:768px){
     #card-about-container{
         /* background-color: white; */
+        margin-top: -80px;
         width: 90%;
         border-radius: 20px;
-        /* box-shadow: .5px 10px 15px rgb(0,0,0,.2); */
-        margin: 50px auto ;
         padding: 25px
     }
 
     #who p{
         font-size: 1rem;
     }
+
+    #about p{
+        font-size: 1rem;
+    }
     
     #card-about-container .btn.btn-primary{
-        width: 90%;
+        width: 79%;
         font-weight: bold;
         height: 2.8rem;
         /* transition: scale 0.5s ease, transform 0.5s ease 0.5s */
         transition: 0.5s;
         border-radius: 20px;
     }
-    
 
     #avatar{
         width: 100%;
