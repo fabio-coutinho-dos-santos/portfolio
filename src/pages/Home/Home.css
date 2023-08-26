@@ -1,11 +1,75 @@
-.container-fluid {
-  margin: 0;
+.container-main {
+  margin-bottom: 80px;
 }
-
 .card-content {
   background-color: aliceblue;
   width: 100%;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 15px 10px 15px rgba(0,0,0,.2);
+}
+
+.social-media .icons {
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  font-size: 4rem;
+  margin-right: 15px;
+  color: gray;
+}
+
+.skill {
+  margin-top: 20px;
+  font-size: 5rem;
+  margin-right: 15px;
+  color: grey;
+  box-shadow: 12px 8px 12px #fff;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.skill:hover {
+  color: #000;
+  scale: 1.2;
+  transition: 0.5s;
+}
+
+.skills-content {
+  padding: 20px;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.see-more {
+  text-align: end;
+}
+
+.see-more span{
+  color: gray;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.see-more span:hover {
+  color: #263238;
+}
+
+@media (max-width: 768px) {
+  .skills-content {
+    margin-top: 30px;
+    background-color: aliceblue;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 15px 10px 15px rgba(0,0,0,.2);
+  }
+  .skill {
+    margin-top: 20px;
+    font-size: 5rem;
+    margin-right: 15px;
+    color: grey;
+    box-shadow: 12px 8px 12px #fff;
+    border-radius: 50%;
+    padding: 15px;
+  }
 }

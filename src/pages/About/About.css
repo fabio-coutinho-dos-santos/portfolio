@@ -1,34 +1,61 @@
-#card-about-container{
-    background-color: white;
+.container {
+    /* margin-left: 280px; */
+}
+
+.about-background {
+    /* min-height: 50vh; */
+    height: 80vh;
+    background-image: url('/public/images/image-background.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+.image-background {
+    /* opacity: 0.2; */
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    top: 0;
     width: 100%;
+    /* background-size: cover; */
+    height: auto;
+    overflow: hidden;
+}
+
+#card-about-container{
+    /* background-color: white; */
+    margin-top: -80px;
+    /* width: 100%; */
     border-radius: 20px;
-    box-shadow: .5px 10px 15px rgb(0,0,0,.2);
-    margin: 50px auto ;
-    padding: 25px
+    /* box-shadow: .5px 10px 15px rgb(0,0,0,.2); */
+    /* margin: 50px auto ; */
+    /* padding: 25px */
 }
 
 #avatar{
-    margin: 0px auto 30px auto;
-    height: 40vh;
-    width: 65%;
-    background-image: url('/public/images/photo.jpg');
+    margin: 0px auto 0px auto;
+    height: 50vh;
+    width: 90%;
+    background-image: url('/public/images/about-image.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: white;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     box-shadow: 15px 10px 15px rgba(0,0,0,.2);
   }
 
 #card-about-container h3{
     font-size: 1.3rem;
     margin-top:25px;
-    text-align: center;
+    text-align: start;
 }
 
 #icons{
     font-size: 2rem;
-    text-align: center;
+    text-align: start;
 }
 
 
@@ -60,7 +87,8 @@
 }
 
 #card-about-container .btn.btn-primary{
-    width: 65%;
+    width: 30%;
+    margin-left: 15px;
     font-weight: bold;
     height: 2.8rem;
     /* transition: scale 0.5s ease, transform 0.5s ease 0.5s */
@@ -69,14 +97,19 @@
 }
 
 #card-about-container .btn.btn-primary:hover{
-    transform: translate(0px, 10px);
-    background-color: #0077B5;
+    transform: translate(0px, 5px);
+    background-color: #263238;
+    border-color: #263238;
+    color: white;
     scale: 1.1;
 }
 
 #card-about-container input[type="button"]{
-    background-color: #0D47A1;
+    background-color: #ECEFF1;
+    color: #263238;
+    border-color: #263238;
 }
+
 
 #who{
     text-align: center;
@@ -86,15 +119,19 @@
     font-size: 1.3rem;
 }
 
+#about p{
+    font-size: 1.3rem;
+}
+
 #who #trace{
     width: 10%;
-    background-color: #0D47A1;
+    background-color: #263238;
     height: 2px;
 }
 
 #who #trace-final{
     width: 10%;
-    background-color: #0D47A1;
+    background-color: #263238;
     height: 2px;
 }
 
@@ -104,7 +141,7 @@
 
 #trace{
     width: 20%;
-    background-color: #0D47A1;
+    background-color: #263238;
     height: 2px;
 }
 
@@ -171,12 +208,28 @@
 
 @media(max-width:768px){
     #card-about-container{
-        background-color: white;
+        /* background-color: white; */
+        margin-top: -80px;
         width: 90%;
         border-radius: 20px;
-        box-shadow: .5px 10px 15px rgb(0,0,0,.2);
-        margin: 50px auto ;
         padding: 25px
+    }
+
+    #who p{
+        font-size: 1rem;
+    }
+
+    #about p{
+        font-size: 1rem;
+    }
+    
+    #card-about-container .btn.btn-primary{
+        width: 79%;
+        font-weight: bold;
+        height: 2.8rem;
+        /* transition: scale 0.5s ease, transform 0.5s ease 0.5s */
+        transition: 0.5s;
+        border-radius: 20px;
     }
 
     #avatar{

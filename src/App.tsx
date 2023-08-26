@@ -19,6 +19,7 @@ import Projects from './pages/Projects/Projects';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { StorageKeys } from './helpers/StorageKeys';
 import { FaArrowUp } from 'react-icons/fa'
+import HomeNew from './pages/HomeNew/HomeNew';
 
 function App() {
   const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
@@ -105,7 +106,7 @@ function App() {
                 </div>
               </div>
               <Routes>
-              <Route path='/home' Component={Home}></Route>
+              <Route path='/home' Component={HomeNew}></Route>
               <Route path='/login' Component={Home}></Route>
               <Route path='/about' Component={About}></Route>
               <Route path='/projects' Component={Projects}></Route>
