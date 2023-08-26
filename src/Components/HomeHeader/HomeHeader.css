@@ -1,10 +1,9 @@
 .header {
   min-width: 90vw;
-  background-color: aliceblue;
+  background-color: white;
   margin: 0px;
   overflow: hidden;
   box-shadow: 0.5px 10px 15px grey;
-  
 }
 
 .header #header-container {
