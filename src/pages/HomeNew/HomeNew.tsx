@@ -3,7 +3,7 @@ import HomeHeader from '../../Components/HomeHeader/HomeHeader'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import "./HomeNew.sass"
 import { FaAngular, FaBootstrap, FaCss3Alt, FaDocker, FaEye, FaGithub, FaHtml5, FaLaravel, FaLinkedin, FaNode, FaNodeJs, FaPhp, FaPython, FaReact, FaSass } from 'react-icons/fa'
-import { SiAndroid, SiC, SiIonic, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiPostgresql, SiPostman, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
+import { SiAndroid, SiC, SiIonic, SiJira, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiNginx, SiPostgresql, SiPostman, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
 import ProjectsItems from '../../Components/Projects/ProjectsItems'
 import { useNavigate } from 'react-router-dom'
 import WorkExperiences from '../../Components/WorkExperiences/WorkExperiences'
@@ -77,6 +77,8 @@ const HomeNew = () => {
                           <SiSwagger className='skill'></SiSwagger>
                           <SiIonic className='skill'></SiIonic>
                           <SiC className='skill'></SiC>
+                          <SiAndroid className='skill'></SiAndroid>
+                          <SiNginx className='skill'></SiNginx>
                         </div>
                       </div>
                     </div>
@@ -102,7 +104,7 @@ const HomeNew = () => {
             </div>
           </div>
 
-          <div className="row d-sm-none mb-4">
+          <div className="row d-sm-none">
             <div className="col-sm-12">
               <div className='skills-content'>
                 <h1 className='d-sm-none'>Main Skills</h1>
@@ -127,6 +129,8 @@ const HomeNew = () => {
                       <FaCss3Alt className='skill'></FaCss3Alt>
                       <FaAngular className='skill'></FaAngular>
                       <SiIonic className='skill'></SiIonic>
+                      <SiAndroid className='skill'></SiAndroid>
+                      <SiNginx className='skill'></SiNginx>
                     </div>
                   </div>
                 </div>
@@ -134,7 +138,7 @@ const HomeNew = () => {
             </div>
           </div>
 
-          <div className="row justify-content-center">
+          <div className="row justify-content-center mt-5">
             <div className="col-sm-12">
               <div className="card-content">
                 <h1>Work Experience</h1>
@@ -211,7 +215,7 @@ const HomeNew = () => {
             </div>
           </div>
 
-          <div className="row-justify-content-center">
+          <div className="row-justify-content-center mt-5">
             <div className="col-sm-12">
               <div className='card-content mt-3'>
                 <h1>Own Projects</h1>

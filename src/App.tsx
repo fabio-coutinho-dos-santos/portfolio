@@ -107,7 +107,7 @@ function App() {
               </div>
               <Routes>
               <Route path='/home' Component={HomeNew}></Route>
-              <Route path='/login' Component={Home}></Route>
+              <Route path='/login' Component={HomeNew}></Route>
               <Route path='/about' Component={About}></Route>
               <Route path='/projects' Component={Projects}></Route>
             </Routes>
