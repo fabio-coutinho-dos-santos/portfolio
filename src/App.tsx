@@ -56,7 +56,7 @@ function App() {
   const exit = () =>{
     setItem(StorageKeys.ACCESS_TOKEN, '')
     setLogged(false);
-    // window.location.reload()
+    window.location.reload()
   }
 
   const minimizeAvatar = () =>{
@@ -78,8 +78,10 @@ function App() {
           <>
             <Routes>
               <Route path='/login' Component={Login}></Route>
-              <Route path='' Component={Login}></Route>
-              <Route path='/register' Component={Register}></Route>
+              <Route path='/home' Component={Login}></Route>
+              <Route path='/about' Component={Login}></Route>
+              <Route path='/projects' Component={Login}></Route>
+              <Route path='/' Component={Login}></Route>
             </Routes>
           </>) : (
           <div id='app'>
