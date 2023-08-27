@@ -43,8 +43,19 @@
 }
 
 #form-container input[type='submit'] {
-    background-color: #01579b;
-    border-color: #01579b;
+    background-color: #fff;
+    border-color: #263238;
+    /* width: 100%; */
+    color: #263238
+}
+
+#form-container input[type='submit']:hover {
+    background-color: #263238;
+    border-color: #263238;
+    /* width: 100%; */
+    color: white;
+    transition: 0.5s;
+    scale: 1.1
 }
 
 .row.align-items-center {
@@ -74,7 +85,7 @@
     }
 
     .btn.btn-primary{
-        width: auto;
+        width: 100%;
     }
 
     .col-md-6.order-md-1{

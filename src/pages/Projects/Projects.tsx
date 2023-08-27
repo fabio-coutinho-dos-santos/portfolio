@@ -2,8 +2,13 @@ import './Projects.sass'
 import ProjectsItems from '../../Components/Projects/ProjectsItems'
 import { FaAngular, FaNodeJs, FaReact } from 'react-icons/fa'
 import { SiMongodb, SiNestjs, SiPostgresql } from 'react-icons/si'
+import { useEffect } from 'react'
 
 const Projects = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <>

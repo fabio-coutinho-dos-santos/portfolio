@@ -18,7 +18,7 @@ const Home = () => {
     // setBodyColor('#90A4AE')
     // setBodyColor('#546E7A')
     // setBodyColor('#EEE')
-  })
+  }, [])
 
   return (
     <>

@@ -3,7 +3,7 @@ import HomeHeader from '../../Components/HomeHeader/HomeHeader'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import "./HomeNew.sass"
 import { FaAngular, FaBootstrap, FaCss3Alt, FaDocker, FaEye, FaGithub, FaHtml5, FaLaravel, FaLinkedin, FaNode, FaNodeJs, FaPhp, FaPython, FaReact, FaSass } from 'react-icons/fa'
-import { SiAndroid, SiC, SiIonic, SiJira, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiNginx, SiPostgresql, SiPostman, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
+import { SiAndroid, SiArduino, SiC, SiCplusplus, SiDigitalocean, SiIonic, SiJira, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiNginx, SiPostgresql, SiPostman, SiRaspberrypi, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
 import ProjectsItems from '../../Components/Projects/ProjectsItems'
 import { useNavigate } from 'react-router-dom'
 import WorkExperiences from '../../Components/WorkExperiences/WorkExperiences'
@@ -16,7 +16,6 @@ const HomeNew = () => {
   useEffect(() => {
     setBodyColor('#ECEFF1')
     // setBodyColor('#000')
-
     // setBodyColor('#CFD8DC')
     // setBodyColor('#90A4AE')
     // setBodyColor('#546E7A')
@@ -32,7 +31,7 @@ const HomeNew = () => {
           <div className="row justify-content-center">
 
             <div className="col-sm-1 d-none d-sm-block">
-              <div className='skills-content'>
+              <div className='skills-content-side'>
                 <div className="row d-flex" id='main-skills'>
                   <div id='icons'>
                     <div className="col-sm-12">
@@ -61,34 +60,11 @@ const HomeNew = () => {
                   </span>
                   <div className='see-more'><span onClick={() => navigate('/about')}>See More</span> </div>
                 </div>
-                <div className="row d-none d-sm-block" id='row-main-skills'>
-                  <div className='skills-content'>
-                    <h1 className='d-sm-none'>Main Skills</h1>
-                    <div className="row d-flex" id='main-skills'>
-                      <div id='icons'>
-                        <div className="col-sm-12">
-                          <FaBootstrap className='skill'></FaBootstrap>
-                          <FaSass className='skill'></FaSass>
-                          <FaReact className='skill'></FaReact>
-                          <FaDocker className='skill'></FaDocker>
-                          <SiMongodb className='skill'></SiMongodb>
-                          <SiMysql className='skill'></SiMysql>
-                          <SiPostgresql className='skill'></SiPostgresql>
-                          <SiSwagger className='skill'></SiSwagger>
-                          <SiIonic className='skill'></SiIonic>
-                          <SiC className='skill'></SiC>
-                          <SiAndroid className='skill'></SiAndroid>
-                          <SiNginx className='skill'></SiNginx>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
             <div className="col-sm-1 d-none d-sm-block">
-              <div className='skills-content'>
+              <div className='skills-content-side'>
                 <div className="row d-flex" id='main-skills'>
                   <div id='icons'>
                     <div className="col-sm-12">
@@ -103,10 +79,41 @@ const HomeNew = () => {
             </div>
           </div>
 
+          <div className="row justify-content-center">
+            <div className="col-sm-12">
+              <div className="row d-none d-sm-block" id='row-main-skills'>
+                <div className='skills-content'>
+                  <h1 className='d-sm-none'>Main Skills</h1>
+                  <div className="row d-flex" id='main-skills'>
+                    <div id='icons'>
+                      <div className="col-sm-12">
+                        <FaBootstrap className='skill'></FaBootstrap>
+                        <FaSass className='skill'></FaSass>
+                        <FaReact className='skill'></FaReact>
+                        <FaDocker className='skill'></FaDocker>
+                        <SiMongodb className='skill'></SiMongodb>
+                        <SiMysql className='skill'></SiMysql>
+                        <SiPostgresql className='skill'></SiPostgresql>
+                        <SiSwagger className='skill'></SiSwagger>
+                        <SiIonic className='skill'></SiIonic>
+                        <SiC className='skill'></SiC>
+                        <SiAndroid className='skill'></SiAndroid>
+                        <SiDigitalocean className='skill'></SiDigitalocean>
+                        <SiCplusplus className='skill'></SiCplusplus>
+                        <SiRaspberrypi className='skill'></SiRaspberrypi>
+                        <SiArduino className='skill'></SiArduino>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="row d-sm-none">
             <div className="col-sm-12">
               <div className='skills-content'>
-                <h1 className='d-sm-none'>Main Skills</h1>
+                <h1 className='d-sm-none'>Skills</h1>
                 <div id="trace"></div>
                 <div className="row d-flex" id='main-skills'>
                   <div id='icons'>
@@ -131,6 +138,10 @@ const HomeNew = () => {
                       <SiIonic className='skill'></SiIonic>
                       <SiAndroid className='skill'></SiAndroid>
                       <SiNginx className='skill'></SiNginx>
+                      <SiDigitalocean className='skill'></SiDigitalocean>
+                      <SiCplusplus className='skill'></SiCplusplus>
+                      <SiRaspberrypi className='skill'></SiRaspberrypi>
+                      <SiArduino className='skill'></SiArduino>
                     </div>
                   </div>
                 </div>
