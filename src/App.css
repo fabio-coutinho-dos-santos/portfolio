@@ -9,9 +9,9 @@
   z-index: 999;
   position: sticky;
   min-height: 100vh;
-  background-color: #263238
-  ;
+  background-color: #263238;
   color: #000;
+  border: none;
 }
 
 .sidebar h2{
