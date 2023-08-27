@@ -56,7 +56,7 @@ function App() {
   const exit = () =>{
     setItem(StorageKeys.ACCESS_TOKEN, '')
     setLogged(false);
-    window.location.reload()
+    window.location.href = '/login'
   }
 
   const minimizeAvatar = () =>{

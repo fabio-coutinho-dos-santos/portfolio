@@ -36,7 +36,7 @@
 }
 
 #form-container .form-floating label {
-    color: #ccc;
+    color: #9E9E9E;
 }
 
 #form-container .form-floating .form-control:focus~label {
@@ -46,14 +46,14 @@
 #form-container input[type='submit'] {
     background-color: #fff;
     border-color: #263238;
-    /* width: 100%; */
+    width: 30%;
+    transition: 0.5s;
     color: #263238
 }
 
 #form-container input[type='submit']:hover {
     background-color: #263238;
     border-color: #263238;
-    /* width: 100%; */
     color: white;
     transition: 0.5s;
     scale: 1.1
