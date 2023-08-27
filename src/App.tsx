@@ -78,6 +78,7 @@ function App() {
           <>
             <Routes>
               <Route path='/login' Component={Login}></Route>
+              <Route path='' Component={Login}></Route>
               <Route path='/register' Component={Register}></Route>
             </Routes>
           </>) : (
@@ -106,8 +107,9 @@ function App() {
                 </div>
               </div>
               <Routes>
+              <Route path='/' Component={HomeNew}></Route>
               <Route path='/home' Component={HomeNew}></Route>
-              <Route path='/login' Component={Home}></Route>
+              <Route path='/login' Component={HomeNew}></Route>
               <Route path='/about' Component={About}></Route>
               <Route path='/projects' Component={Projects}></Route>
             </Routes>

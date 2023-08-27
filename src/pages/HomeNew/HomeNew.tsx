@@ -3,7 +3,7 @@ import HomeHeader from '../../Components/HomeHeader/HomeHeader'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import "./HomeNew.sass"
 import { FaAngular, FaBootstrap, FaCss3Alt, FaDocker, FaEye, FaGithub, FaHtml5, FaLaravel, FaLinkedin, FaNode, FaNodeJs, FaPhp, FaPython, FaReact, FaSass } from 'react-icons/fa'
-import { SiAndroid, SiC, SiIonic, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiPostgresql, SiPostman, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
+import { SiAndroid, SiArduino, SiC, SiCplusplus, SiDigitalocean, SiIonic, SiJira, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiNginx, SiPostgresql, SiPostman, SiRaspberrypi, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
 import ProjectsItems from '../../Components/Projects/ProjectsItems'
 import { useNavigate } from 'react-router-dom'
 import WorkExperiences from '../../Components/WorkExperiences/WorkExperiences'
@@ -16,7 +16,6 @@ const HomeNew = () => {
   useEffect(() => {
     setBodyColor('#ECEFF1')
     // setBodyColor('#000')
-
     // setBodyColor('#CFD8DC')
     // setBodyColor('#90A4AE')
     // setBodyColor('#546E7A')
@@ -32,8 +31,7 @@ const HomeNew = () => {
           <div className="row justify-content-center">
 
             <div className="col-sm-1 d-none d-sm-block">
-              <div className='skills-content'>
-                <h1 className='d-sm-none'>Main Skills</h1>
+              <div className='skills-content-side'>
                 <div className="row d-flex" id='main-skills'>
                   <div id='icons'>
                     <div className="col-sm-12">
@@ -50,7 +48,8 @@ const HomeNew = () => {
               <div className='mt-5'>
                 <div className="row card-content">
                   <h1>About me</h1>
-                  <span className='mt-2'>With over 5 years of experience in software
+                  <div id="trace"></div>
+                  <span className='mt-3'>With over 5 years of experience in software
                     development, I am highly motivated and passionate about building innovative solutions.
                     As an experienced full-stack developer, I possess proficiency in Node.js, Express, NestJs,
                     and Laravel. My expertise extends to REST API development, Docker-based microservices,
@@ -61,33 +60,11 @@ const HomeNew = () => {
                   </span>
                   <div className='see-more'><span onClick={() => navigate('/about')}>See More</span> </div>
                 </div>
-                <div className="row d-none d-sm-block" id='row-main-skills'>
-                  <div className='skills-content'>
-                    <h1 className='d-sm-none'>Main Skills</h1>
-                    <div className="row d-flex" id='main-skills'>
-                      <div id='icons'>
-                        <div className="col-sm-12">
-                          <FaBootstrap className='skill'></FaBootstrap>
-                          <FaSass className='skill'></FaSass>
-                          <FaReact className='skill'></FaReact>
-                          <FaDocker className='skill'></FaDocker>
-                          <SiMongodb className='skill'></SiMongodb>
-                          <SiMysql className='skill'></SiMysql>
-                          <SiPostgresql className='skill'></SiPostgresql>
-                          <SiSwagger className='skill'></SiSwagger>
-                          <SiIonic className='skill'></SiIonic>
-                          <SiC className='skill'></SiC>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
             <div className="col-sm-1 d-none d-sm-block">
-              <div className='skills-content'>
-                <h1 className='d-sm-none'>Main Skills</h1>
+              <div className='skills-content-side'>
                 <div className="row d-flex" id='main-skills'>
                   <div id='icons'>
                     <div className="col-sm-12">
@@ -102,10 +79,42 @@ const HomeNew = () => {
             </div>
           </div>
 
-          <div className="row d-sm-none mb-4">
+          <div className="row justify-content-center">
+            <div className="col-sm-12">
+              <div className="row d-none d-sm-block" id='row-main-skills'>
+                <div className='skills-content'>
+                  <h1 className='d-sm-none'>Main Skills</h1>
+                  <div className="row d-flex" id='main-skills'>
+                    <div id='icons'>
+                      <div className="col-sm-12">
+                        <FaBootstrap className='skill'></FaBootstrap>
+                        <FaSass className='skill'></FaSass>
+                        <FaReact className='skill'></FaReact>
+                        <FaDocker className='skill'></FaDocker>
+                        <SiMongodb className='skill'></SiMongodb>
+                        <SiMysql className='skill'></SiMysql>
+                        <SiPostgresql className='skill'></SiPostgresql>
+                        <SiSwagger className='skill'></SiSwagger>
+                        <SiIonic className='skill'></SiIonic>
+                        <SiC className='skill'></SiC>
+                        <SiAndroid className='skill'></SiAndroid>
+                        <SiDigitalocean className='skill'></SiDigitalocean>
+                        <SiCplusplus className='skill'></SiCplusplus>
+                        <SiRaspberrypi className='skill'></SiRaspberrypi>
+                        <SiArduino className='skill'></SiArduino>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row d-sm-none">
             <div className="col-sm-12">
               <div className='skills-content'>
-                <h1 className='d-sm-none'>Main Skills</h1>
+                <h1 className='d-sm-none'>Skills</h1>
+                <div id="trace"></div>
                 <div className="row d-flex" id='main-skills'>
                   <div id='icons'>
                     <div className="col-sm-12">
@@ -127,6 +136,12 @@ const HomeNew = () => {
                       <FaCss3Alt className='skill'></FaCss3Alt>
                       <FaAngular className='skill'></FaAngular>
                       <SiIonic className='skill'></SiIonic>
+                      <SiAndroid className='skill'></SiAndroid>
+                      <SiNginx className='skill'></SiNginx>
+                      <SiDigitalocean className='skill'></SiDigitalocean>
+                      <SiCplusplus className='skill'></SiCplusplus>
+                      <SiRaspberrypi className='skill'></SiRaspberrypi>
+                      <SiArduino className='skill'></SiArduino>
                     </div>
                   </div>
                 </div>
@@ -134,10 +149,11 @@ const HomeNew = () => {
             </div>
           </div>
 
-          <div className="row justify-content-center">
+          <div className="row justify-content-center mt-5">
             <div className="col-sm-12">
               <div className="card-content">
                 <h1>Work Experience</h1>
+                <div id="trace"></div>
                 <WorkExperiences
                   company='Mensis'
                   title='Fullstack developer (2020 / Current)'
@@ -211,10 +227,11 @@ const HomeNew = () => {
             </div>
           </div>
 
-          <div className="row-justify-content-center">
+          <div className="row-justify-content-center mt-5">
             <div className="col-sm-12">
               <div className='card-content mt-3'>
                 <h1>Own Projects</h1>
+                <div id="trace"></div>
                 <ProjectsItems
                   title="REST API Node.js"
                   urlBack=""
@@ -223,6 +240,7 @@ const HomeNew = () => {
                   repoFront=''
                   icon={<SiNestjs />}
                   icon2={<SiMongodb />}
+                  icon3=''
                 >
                   API developed using NestJs that has extensive coverage of unit and integration tests. It utilizes MongoDB for data storage and also includes functionality for building and sending emails and messages via RabbitMQ.
                 </ProjectsItems>
@@ -237,6 +255,7 @@ const HomeNew = () => {
                   repoBack=''
                   icon={<FaAngular />}
                   icon2={<FaNodeJs />}
+                  icon3={<SiMongodb />}
                 >
                   An application that simulates a short banking system, featuring user registration, login, and a dashboard page that allows users to view their transaction history and account balance. The application is developed using Angular, Node.js, and MongoDB.
                 </ProjectsItems>
@@ -251,6 +270,7 @@ const HomeNew = () => {
                   repoBack=''
                   icon={<FaAngular />}
                   icon2={<FaNodeJs />}
+                  icon3={<SiMongodb />}
                 >
                   An application designed to manage clients and operations of an esthetic clinic. The technologies used were Angular, Node.js, and MongoDB.
                 </ProjectsItems>
@@ -265,6 +285,7 @@ const HomeNew = () => {
                   repoBack=''
                   icon={<FaAngular />}
                   icon2={<FaNodeJs />}
+                  icon3={<SiMongodb />}
                 >
                   Page for the client of the esthetic clinic to fill out an anamnesis form. After completion, the form becomes available in the management application. Built using Angular.
                 </ProjectsItems>
@@ -279,6 +300,7 @@ const HomeNew = () => {
                   repoBack=''
                   icon={<FaReact />}
                   icon2={<SiNestjs />}
+                  icon3={<SiMongodb />}
                 >
                   Page for the completion of anamnesis forms by clients, restructured to be multi-company with a new interface and functionalities. Built using NestJS and React.
                 </ProjectsItems>

@@ -13,7 +13,7 @@ const Register = () => {
 
     return (
         <>
-            <div className="container col-11 col-sm-9" id="form-container">
+            <div className="container col-11 col-sm-9" id="form-register">
                 <div className="row align-items-center gx-5">
                     <div className="col-sm-6 order-md-1">
                     <h2>Realize seu cadastro</h2>

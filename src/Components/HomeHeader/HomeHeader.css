@@ -11,9 +11,9 @@
 }
 
 #header-container #avatar {
-  margin: 20px auto 30px auto;
-  height: 20vh;
-  width: 62%;
+  /* margin: 20px auto 30px auto; */
+  height: 25vh;
+  width: 80%;
   background-image: url('/public/images/photo.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -23,19 +23,48 @@
   box-shadow: 15px 10px 15px rgba(0,0,0,.2);
 }
 
+#header-container .btn.btn-primary{
+  width: 60%;
+  margin-left: 15px;
+  font-weight: bold;
+  height: 2.8rem;
+  /* transition: scale 0.5s ease, transform 0.5s ease 0.5s */
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+#header-container .btn.btn-primary:hover{
+  transform: translate(0px, 5px);
+  background-color: #263238;
+  border-color: #263238;
+  color: white;
+  scale: 1.1;
+}
+
+#header-container input[type="button"]{
+  background-color: white;
+  color: #263238;
+  border-color: #263238;
+}
+
 @media (max-width:768px) {
   #header-container #avatar {
     text-align: center;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     width: 250px;
     height: 250px;
   }
 
+  #header-container .btn.btn-primary{
+    width: 65%;
+    font-weight: bold;
+    height: 2.8rem;
+    /* transition: scale 0.5s ease, transform 0.5s ease 0.5s */
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
   #name{
     text-align: center;
-  }
-
-  .header {
-    padding-bottom: 30px;
   }
 }

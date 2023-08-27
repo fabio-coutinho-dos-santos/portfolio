@@ -8,15 +8,16 @@ interface Props {
   repoBack: string
   icon: any
   icon2: any
+  icon3: any
   children: React.ReactNode
 }
 
-const ProjectsItems = ({ title, urlFront, urlBack, children, repoFront, repoBack, icon, icon2 }: Props) => {
+const ProjectsItems = ({ title, urlFront, urlBack, children, repoFront, repoBack, icon, icon2, icon3 }: Props) => {
   return (
     <>
       <div className="Projects">
         <div className="row">
-          <h3 className="title mt-3">{icon} {icon2} {title}</h3>
+          <h3 className="title mt-3">{icon} {icon2} {icon3} {title}</h3>
         </div>
         <div className="description mt-3 mb-3">{children}</div>
         {urlFront &&  ( <div> <span>Front end application: </span> <a href={urlFront}>{urlFront} </a> </div>)}
