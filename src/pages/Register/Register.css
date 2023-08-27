@@ -1,4 +1,4 @@
-#form-container{
+#form-register{
     background-color: white;
     border-radius: 20px;
     box-shadow: .5px 10px 15px rgb(0,0,0,.2);
@@ -7,44 +7,44 @@
 }
 
 
-#form-container h2{
+#form-register h2{
     font-weight: 900;
     margin-bottom: 30px;
 }
 
-#form-container .form-control{
+#form-register .form-control{
     border: none;
     border-bottom: 1px solid #ccc;
     border-radius: 0;
 }
 
-#form-container .form-control:focus{
+#form-register .form-control:focus{
     box-shadow: none;
 }
 
-#form-container .form-floating label{
+#form-register .form-floating label{
     color: #ccc
 }
 
-#form-container .form-control:focus~label{
+#form-register .form-control:focus~label{
     color: #222;
 }
 
-#form-container input[type='submit']{
+#form-register input[type='submit']{
+    background-color: #fff;
+    border-color: #01579b;
+}
+
+#form-register input[type='checkbox']:checked{
     background-color: #01579b;
     border-color: #01579b;
 }
 
-#form-container input[type='checkbox']:checked{
-    background-color: #01579b;
-    border-color: #01579b;
-}
-
-#form-container a{
+#form-register a{
     color: #222;
 }
 
-#form-container a:hover{
+#form-register a:hover{
     color: #01579b;
 }
 
@@ -57,12 +57,12 @@
     padding: 50px;
 }
 
-#link-container{
+#link-register{
     text-align: center;
     padding: 50px;
 }
 
-#form-container .form-check-input:focus{
+#form-register .form-check-input:focus{
     box-shadow: none;
 }
 
@@ -71,7 +71,7 @@
         width: auto;
     }
 
-    #form-container{
+    #form-register{
         padding: 50px;
         margin: 50px auto;
     }

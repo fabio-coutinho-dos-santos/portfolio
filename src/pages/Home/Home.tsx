@@ -18,7 +18,7 @@ const Home = () => {
     // setBodyColor('#90A4AE')
     // setBodyColor('#546E7A')
     // setBodyColor('#EEE')
-  })
+  }, [])
 
   return (
     <>
@@ -57,6 +57,7 @@ const Home = () => {
                   repoFront=''
                   icon={<SiNestjs />}
                   icon2={<SiMongodb />}
+                  icon3=''
                 >
                   API developed using NestJs that has extensive coverage of unit and integration tests. It utilizes MongoDB for data storage and also includes functionality for building and sending emails and messages via RabbitMQ.
                 </ProjectsItems>
@@ -71,6 +72,7 @@ const Home = () => {
                   repoBack='https://github.com/fabio-coutinho-dos-santos/api-4cadia'
                   icon={<FaAngular />}
                   icon2={<FaNodeJs />}
+                  icon3={<SiMongodb />}
                 >
                   An application that simulates a short banking system, featuring user registration, login, and a dashboard page that allows users to view their transaction history and account balance. The application is developed using Angular, Node.js, and MongoDB.
                 </ProjectsItems>
@@ -85,6 +87,7 @@ const Home = () => {
                   repoBack='https://github.com/fabio-coutinho-dos-santos/api-bella'
                   icon={<FaAngular />}
                   icon2={<FaNodeJs />}
+                  icon3={<SiMongodb />}
                 >
                   An application designed to manage clients and operations of an esthetic clinic. The technologies used were Angular, Node.js, and MongoDB.
                 </ProjectsItems>
@@ -99,6 +102,7 @@ const Home = () => {
                   repoBack='https://github.com/fabio-coutinho-dos-santos/api-bella'
                   icon={<FaAngular />}
                   icon2={<FaNodeJs />}
+                  icon3={<SiMongodb />}
                 >
                   Page for the client of the esthetic clinic to fill out an anamnesis form. After completion, the form becomes available in the management application. Built using Angular.
                 </ProjectsItems>
@@ -113,6 +117,7 @@ const Home = () => {
                   repoBack='https://github.com/fabio-coutinho-dos-santos/form-api-v1'
                   icon={<FaReact />}
                   icon2={<SiNestjs />}
+                  icon3={<SiPostgresql />}
                 >
                   Page for the completion of anamnesis forms by clients, restructured to be multi-company with a new interface and functionalities. Built using NestJS and React.
                 </ProjectsItems>
