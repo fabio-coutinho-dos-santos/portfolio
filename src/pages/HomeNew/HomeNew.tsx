@@ -3,7 +3,7 @@ import HomeHeader from '../../Components/HomeHeader/HomeHeader'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import "./HomeNew.sass"
 import { FaAngular, FaBootstrap, FaCss3Alt, FaDocker, FaEye, FaGithub, FaHtml5, FaLaravel, FaLinkedin, FaNode, FaNodeJs, FaPhp, FaPython, FaReact, FaSass } from 'react-icons/fa'
-import { SiAndroid, SiArduino, SiC, SiCplusplus, SiDigitalocean, SiIonic, SiJira, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiNginx, SiPostgresql, SiPostman, SiRaspberrypi, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
+import { SiAndroid, SiArduino, SiC, SiCplusplus, SiDigitalocean, SiIonic, SiJira, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiNginx, SiPostgresql, SiPostman, SiRabbitmq, SiRaspberrypi, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
 import ProjectsItems from '../../Components/Projects/ProjectsItems'
 import { useNavigate } from 'react-router-dom'
 import WorkExperiences from '../../Components/WorkExperiences/WorkExperiences'
@@ -101,7 +101,7 @@ const HomeNew = () => {
                         <SiDigitalocean className='skill'></SiDigitalocean>
                         <SiCplusplus className='skill'></SiCplusplus>
                         <SiRaspberrypi className='skill'></SiRaspberrypi>
-                        <SiArduino className='skill'></SiArduino>
+                        <SiRabbitmq className='skill'></SiRabbitmq>
                       </div>
                     </div>
                   </div>
@@ -141,7 +141,7 @@ const HomeNew = () => {
                       <SiDigitalocean className='skill'></SiDigitalocean>
                       <SiCplusplus className='skill'></SiCplusplus>
                       <SiRaspberrypi className='skill'></SiRaspberrypi>
-                      <SiArduino className='skill'></SiArduino>
+                      <SiRabbitmq className='skill'></SiRabbitmq>
                     </div>
                   </div>
                 </div>
