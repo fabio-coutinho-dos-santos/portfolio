@@ -14,7 +14,7 @@ const HomeNew = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setBodyColor('#ECEFF1')
+    setBodyColor('#E0E0E0')
     // setBodyColor('#000')
     // setBodyColor('#CFD8DC')
     // setBodyColor('#90A4AE')
@@ -58,7 +58,7 @@ const HomeNew = () => {
                     expertise in Laravel, Angular, React, and Bootstrap, enabling me to deliver seamless user
                     experiences.
                   </span>
-                  <div className='see-more'><span onClick={() => navigate('/about')}>See More</span> </div>
+                  <div className='see-more'><span onClick={() => navigate('/about')}>About</span> </div>
                 </div>
               </div>
             </div>
@@ -222,7 +222,7 @@ const HomeNew = () => {
                   ]}
                 >
                 </WorkExperiences>
-                <div className='see-more'><span onClick={() => navigate('/about')}>See More</span> </div>
+                <div className='see-more'><span onClick={() => navigate('/about')}>About</span> </div>
               </div>
             </div>
           </div>
@@ -305,7 +305,7 @@ const HomeNew = () => {
                   Page for the completion of anamnesis forms by clients, restructured to be multi-company with a new interface and functionalities. Built using NestJS and React.
                 </ProjectsItems>
 
-                <div className='see-more'><span onClick={() => navigate('/projects')}>See More</span> </div>
+                <div className='see-more'><span onClick={() => navigate('/projects')}>Projects</span> </div>
 
               </div>
             </div>

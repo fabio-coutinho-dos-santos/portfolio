@@ -30,9 +30,8 @@ function App() {
   const [pageTitle, setPageTitle] = useState('Home')
 
   useEffect(()=>{
-    toggle()
     minimizeAvatar();
-    setBodyColor("whitesmoke")
+    // setBodyColor("whitesmoke")
     document.documentElement.style.setProperty('--avatarH', avatarH)
     const token: any = getItem(StorageKeys.ACCESS_TOKEN);
     console.log(token)
