@@ -1,7 +1,7 @@
 import './Projects.sass'
 import ProjectsItems from '../../Components/Projects/ProjectsItems'
 import { FaAngular, FaNodeJs, FaReact } from 'react-icons/fa'
-import { SiMongodb, SiNestjs, SiPostgresql } from 'react-icons/si'
+import { SiMongodb, SiNestjs, SiPostgresql, SiSwagger } from 'react-icons/si'
 import { useEffect } from 'react'
 
 const Projects = () => {
@@ -58,7 +58,7 @@ const Projects = () => {
                   repoFront=''
                   icon={<SiNestjs />}
                   icon2={<SiMongodb />}
-                  icon3=''
+                  icon3={<SiSwagger/>}
                 >
                   API developed using NestJs that has extensive coverage of unit and integration tests. It utilizes MongoDB for data storage and also includes functionality for building and sending emails and messages via RabbitMQ. Production deployment of the API on the Render service via Docker and MongoDB database on the Atlas cloud service.
                 </ProjectsItems>

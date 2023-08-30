@@ -231,7 +231,24 @@ const HomeNew = () => {
             <div className="col-sm-12">
               <div className='card-content mt-3'>
                 <h1>Own Projects</h1>
-                <div id="trace"></div>
+                <div id="trace" className='mb-3'></div>
+
+                <ProjectsItems
+                  title="Portfolio"
+                  urlBack=""
+                  repoBack=''
+                  urlFront=''
+                  repoFront=''
+                  icon={<SiNestjs />}
+                  icon2={<SiPostgresql />}
+                  icon3={<FaReact />}
+                >
+                  This portfolio has been developed using React with TypeScript, CSS, Sass, and Bootstrap.
+                  It includes an authentication REST microservice developed in Node.js using NestJS, with a PostgreSQL database.
+                </ProjectsItems>
+
+                <hr className='mt-4' />
+
                 <ProjectsItems
                   title="REST API Node.js"
                   urlBack=""
@@ -240,7 +257,7 @@ const HomeNew = () => {
                   repoFront=''
                   icon={<SiNestjs />}
                   icon2={<SiMongodb />}
-                  icon3=''
+                  icon3={<SiSwagger/>}
                 >
                   API developed using NestJs that has extensive coverage of unit and integration tests. It utilizes MongoDB for data storage and also includes functionality for building and sending emails and messages via RabbitMQ.
                 </ProjectsItems>
