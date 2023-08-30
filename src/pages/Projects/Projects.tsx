@@ -20,6 +20,35 @@ const Projects = () => {
         <div className="row-justify-content-center">
           <div className="col-sm-12">
             <div className="row justify-content-center align-items-center gx-5">
+              <div className="col-sm-5 mb-3 order-sm-2">
+                <ProjectsItems
+                  title="Portfolio"
+                  urlBack="https://portfolio-api-g4lo.onrender.com/api/v1/doc#/"
+                  repoBack='https://github.com/fabio-coutinho-dos-santos/portfolio-api'
+                  urlFront='https://portfolio-inky-six-97.vercel.app/'
+                  repoFront='https://github.com/fabio-coutinho-dos-santos/portfolio'
+                  icon={<SiNestjs />}
+                  icon2={<SiPostgresql />}
+                  icon3={<FaReact />}
+                >
+                  This portfolio has been developed using React with TypeScript, CSS, Sass, and Bootstrap.
+                  It includes an authentication REST microservice developed in Node.js using NestJS, with a PostgreSQL database.
+                </ProjectsItems>
+              </div>
+              <div className="col-sm-7">
+                <img src="/images/portfolio.png" alt="" className='img-fluid' />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="row m-1 justify-content-end">
+          <div id="trace"></div>
+        </div>
+
+        <div className="row-justify-content-center">
+          <div className="col-sm-12">
+            <div className="row justify-content-center align-items-center gx-5">
               <div className="col-sm-5 mb-3">
                 <ProjectsItems
                   title="REST API Node.js"
