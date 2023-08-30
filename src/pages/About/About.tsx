@@ -17,7 +17,7 @@ import WorkExperiences from '../../Components/WorkExperiences/WorkExperiences';
 import { useEffect } from 'react';
 
 const downloadResume = () => {
-  window.location.href = "/documents/cv.pdf"
+  window.location.href = "/documents/cv-new.pdf"
 }
 
 type Props = {}

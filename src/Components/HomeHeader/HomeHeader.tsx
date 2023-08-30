@@ -4,7 +4,7 @@ import './HomeHeader.css'
 const HomeHeader = () => {
 
   const downloadResume = () => {
-    window.location.href = "/documents/cv.pdf"
+    window.location.href = "/documents/cv-new.pdf"
   }
 
   return (
