@@ -70,7 +70,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="row m-1 justify-content-end">
+        <div className="row m-1 justify-content-start">
           <div id="trace"></div>
         </div>
 
@@ -100,7 +100,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="row m-1 justify-content-start">
+        <div className="row m-1 justify-content-end">
           <div id="trace"></div>
         </div>
 
@@ -129,7 +129,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="row m1 justify-content-end">
+        <div className="row m-1 justify-content-start">
           <div id="trace"></div>
         </div>
 
@@ -158,7 +158,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="row m-1 justify-content-start">
+        <div className="row m-1 justify-content-end">
           <div id="trace"></div>
         </div>
 

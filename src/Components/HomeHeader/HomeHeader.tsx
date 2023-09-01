@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import './HomeHeader.css'
+import './HomeHeader.sass'
 
 const HomeHeader = () => {
 

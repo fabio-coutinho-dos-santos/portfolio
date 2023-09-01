@@ -14,7 +14,7 @@ const HomeNew = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setBodyColor('#E0E0E0')
+    setBodyColor('#ECEFF1')
     // setBodyColor('#000')
     // setBodyColor('#CFD8DC')
     // setBodyColor('#90A4AE')
@@ -110,6 +110,8 @@ const HomeNew = () => {
             </div> */}
 
           </div>
+
+          
 
           <div className="row justify-content-center">
             <div className="col-sm-12">

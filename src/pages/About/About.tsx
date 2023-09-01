@@ -1,4 +1,4 @@
-import './About.css'
+import './About.sass'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import CardSkills from '../../Components/CardSkills/CardSkills'
@@ -34,11 +34,11 @@ const About = (props: Props) => {
         <div className="row mt-sm-5" id='about-me'>
           <h1>About me</h1>
           <div id="trace"></div>
-          <div className="col-12 col-sm-12" id='card-about-container'>
+          <div className="col-12 col-sm-12" id='about-container'>
             <div className="row justify-content-center align-items-center mt-3 gx-5">
               <div className="col-lg-5">
                 <div id="avatar"></div>
-                <div className="row d-none d-sm-block" id='download-btn'>
+                <div className="row d-none d-sm-block mt-1" id='download-btn'>
                   <input type="button" onClick={downloadResume} className='btn btn-primary' value={"Download Resume"} />
                 </div>
               </div>

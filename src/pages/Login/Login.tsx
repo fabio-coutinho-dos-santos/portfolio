@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Login.css'
+import './Login.sass'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Register from '../Register/Register';
