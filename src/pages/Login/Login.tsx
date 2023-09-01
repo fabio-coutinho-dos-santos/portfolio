@@ -18,7 +18,7 @@ const Login = () => {
 
 
   useEffect(() => {
-    setBodyColor("#E0E0E0")
+    setBodyColor("#ECEFF1")
     // setBodyColor("#F8F8F8F8")
   }, [])
 
