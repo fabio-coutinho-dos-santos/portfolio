@@ -3,7 +3,7 @@ import HomeHeader from '../../Components/HomeHeader/HomeHeader'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import "./HomeNew.sass"
 import { FaAngular, FaBootstrap, FaCss3Alt, FaDocker, FaEye, FaGithub, FaHtml5, FaLaravel, FaLinkedin, FaNode, FaNodeJs, FaPhp, FaPython, FaReact, FaSass } from 'react-icons/fa'
-import { SiAndroid, SiArduino, SiC, SiCplusplus, SiDigitalocean, SiIonic, SiJira, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiNginx, SiPostgresql, SiPostman, SiRabbitmq, SiRaspberrypi, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
+import { SiAndroid, SiArduino, SiC, SiCplusplus, SiDigitalocean, SiIonic, SiJira, SiMongodb, SiMqtt, SiMysql, SiNestjs, SiNginx, SiOpentelemetry, SiPostgresql, SiPostman, SiRabbitmq, SiRaspberrypi, SiReact, SiSwagger, SiTensorflow } from 'react-icons/si'
 import ProjectsItems from '../../Components/Projects/ProjectsItems'
 import { useNavigate } from 'react-router-dom'
 import WorkExperiences from '../../Components/WorkExperiences/WorkExperiences'
@@ -30,7 +30,7 @@ const HomeNew = () => {
 
           <div className="row justify-content-center">
 
-            <div className="col-sm-1 d-none d-sm-block">
+            {/* <div className="col-sm-1 d-none d-sm-block">
               <div className='skills-content-side'>
                 <div className="row d-flex" id='main-skills'>
                   <div id='icons'>
@@ -43,8 +43,39 @@ const HomeNew = () => {
                   </div>
                 </div>
               </div>
+            </div> */}
+
+
+            <div className="row justify-content-center">
+              <div className="col-sm-12">
+                <div className="row d-none d-sm-block" id='row-main-skills'>
+                  <div className='skills-content'>
+                    <h1 className='d-sm-none'>Main Skills</h1>
+                    <div className="row d-flex" id='main-skills'>
+                      <div id='icons'>
+                        <div className="col-sm-12">
+                          <FaNodeJs className='skill' ></FaNodeJs>
+                          <SiNestjs className='skill'></SiNestjs>
+                          <FaPhp className='skill' ></FaPhp>
+                          <FaLaravel className='skill'></FaLaravel>
+                          <FaPython className='skill'></FaPython>
+                          <FaHtml5 className='skill'></FaHtml5>
+                          <FaCss3Alt className='skill'></FaCss3Alt>
+                          <FaAngular className='skill'></FaAngular>
+                          <FaBootstrap className='skill'></FaBootstrap>
+                          <FaSass className='skill'></FaSass>
+                          <FaReact className='skill'></FaReact>
+                          <SiOpentelemetry className='skill'></SiOpentelemetry>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="col-sm-10">
+
+
+            <div className="col-sm-12">
               <div className='mt-5'>
                 <div className="row card-content">
                   <h1>About me</h1>
@@ -62,7 +93,7 @@ const HomeNew = () => {
                 </div>
               </div>
             </div>
-
+            {/* 
             <div className="col-sm-1 d-none d-sm-block">
               <div className='skills-content-side'>
                 <div className="row d-flex" id='main-skills'>
@@ -76,7 +107,8 @@ const HomeNew = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
           </div>
 
           <div className="row justify-content-center">
@@ -87,9 +119,6 @@ const HomeNew = () => {
                   <div className="row d-flex" id='main-skills'>
                     <div id='icons'>
                       <div className="col-sm-12">
-                        <FaBootstrap className='skill'></FaBootstrap>
-                        <FaSass className='skill'></FaSass>
-                        <FaReact className='skill'></FaReact>
                         <FaDocker className='skill'></FaDocker>
                         <SiMongodb className='skill'></SiMongodb>
                         <SiMysql className='skill'></SiMysql>
@@ -151,7 +180,7 @@ const HomeNew = () => {
 
           <div className="row justify-content-center mt-5">
             <div className="col-sm-12">
-              <div className="card-content">
+              <div className="row card-content">
                 <h1>Work Experience</h1>
                 <div id="trace"></div>
                 <WorkExperiences
@@ -229,7 +258,7 @@ const HomeNew = () => {
 
           <div className="row-justify-content-center mt-5">
             <div className="col-sm-12">
-              <div className='card-content mt-3'>
+              <div className='row card-content mt-3'>
                 <h1>Own Projects</h1>
                 <div id="trace" className='mb-3'></div>
 
@@ -257,7 +286,7 @@ const HomeNew = () => {
                   repoFront=''
                   icon={<SiNestjs />}
                   icon2={<SiMongodb />}
-                  icon3={<SiSwagger/>}
+                  icon3={<SiSwagger />}
                 >
                   API developed using NestJs that has extensive coverage of unit and integration tests. It utilizes MongoDB for data storage and also includes functionality for building and sending emails and messages via RabbitMQ.
                 </ProjectsItems>
