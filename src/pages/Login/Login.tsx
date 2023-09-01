@@ -62,14 +62,14 @@ const Login = () => {
                 <div className="col-6 col-sm-3">
                   <input type="submit" className='btn btn-primary' value={'Login'} />
                 </div>
-                {loading && <div className="col-3 mt-4">
+                {loading && <div className="col-3">
                   <div className="spinner-border" role="status"></div>
                 </div>}
               </div>
             </form>
           </div>
 
-          <div className="col-md-6 order-md-1 d-none d-sm-block">
+          <div className="col-md-6 order-md-1">
             <div className="col-12">
               <img src="images/login-image.png" alt="Entrar no Sistema" className='img-fluid' />
             </div>

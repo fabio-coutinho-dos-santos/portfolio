@@ -40,6 +40,7 @@ function App() {
   },[])
 
   const toggle = () => {
+
     toggleSidebar();
     if (toggled) {
       console.log(toggled)
@@ -84,7 +85,7 @@ function App() {
             </Routes>
           </>) : (
           <div id='app'>
-              <Sidebar className='sidebar position-fixed' width='200px' backgroundColor='' breakPoint="sm">
+              <Sidebar className='sidebar position-fixed' defaultCollapsed width='200px' backgroundColor='' breakPoint="sm">
                 <Menu>
                   <MenuItem className='collapse-btn' icon={<MenuOutlinedIcon/>} onClick={() => {toggle();}}>
                   {" "}
