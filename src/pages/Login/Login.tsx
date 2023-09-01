@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Login.css'
+import './Login.sass'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Register from '../Register/Register';
@@ -18,7 +18,7 @@ const Login = () => {
 
 
   useEffect(() => {
-    setBodyColor("#ECEFF1")
+    setBodyColor("#E0E0E0")
     // setBodyColor("#F8F8F8F8")
   }, [])
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './CardSkills.css'
+import './CardSkills.sass'
 
 interface Props {
     title:string,

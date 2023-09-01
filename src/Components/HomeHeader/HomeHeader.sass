@@ -1,0 +1,62 @@
+@import '../../variables'
+
+.header
+  min-width: 90vw
+  background-color: white
+  margin: 0px
+  overflow: hidden
+  box-shadow: 0.5px 10px 15px grey
+
+  #header-container
+    width: 100%
+
+    #avatar
+      /* margin: 20px auto 30px auto */
+      height: 25vh
+      width: 80%
+      background-image: url('~/public/images/photo.jpg')
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      background-color: white
+      border-radius: 50%
+      box-shadow: 15px 10px 15px rgba(0,0,0,.2)
+
+    .btn.btn-primary
+      width: 60%
+      margin-left: 15px
+      font-weight: bold
+      height: 2.8rem
+      /* transition: scale 0.5s ease, transform 0.5s ease 0.5s */
+      transition: 0.5s
+      border-radius: 20px
+
+      &:hover
+        transform: translate(0px, 5px)
+        background-color: #263238
+        border-color: #263238
+        color: white
+        scale: 1.1
+
+    input[type="button"]
+      background-color: white
+      color: #263238
+      border-color: #263238
+
+  @media (max-width: 768px)
+    #header-container #avatar
+      text-align: center
+      /* margin-top: 80px */
+      width: 250px
+      height: 250px
+
+    #header-container .btn.btn-primary
+      width: 55%
+      font-weight: bold
+      height: 2.8rem
+      /* transition: scale 0.5s ease, transform 0.5s ease 0.5s */
+      transition: 0.5s
+      border-radius: 20px
+
+    #name
+      text-align: center
