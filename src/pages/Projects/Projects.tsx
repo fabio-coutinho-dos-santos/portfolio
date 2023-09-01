@@ -23,7 +23,7 @@ const Projects = () => {
               <div className="col-sm-5 mb-3 order-sm-2">
                 <ProjectsItems
                   title="Portfolio"
-                  urlBack="https://portfolio-api-g4lo.onrender.com/api/v1/doc#/"
+                  urlBack='https://portfolioapi-toffnxjumq-rj.a.run.app/api/v1/doc#'
                   repoBack='https://github.com/fabio-coutinho-dos-santos/portfolio-api'
                   urlFront='https://portfolio-inky-six-97.vercel.app/'
                   repoFront='https://github.com/fabio-coutinho-dos-santos/portfolio'
@@ -32,7 +32,7 @@ const Projects = () => {
                   icon3={<FaReact />}
                 >
                   This portfolio has been developed using React with TypeScript, CSS, Sass, and Bootstrap.
-                  It includes an authentication REST microservice developed in Node.js using NestJS, with a PostgreSQL database.
+                  It includes an authentication REST microservice developed in Node.js using NestJS, with a PostgreSQL database deployed in GCP Cloud Run sevice.
                 </ProjectsItems>
               </div>
               <div className="col-sm-7">
