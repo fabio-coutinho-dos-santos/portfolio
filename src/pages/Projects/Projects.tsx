@@ -169,7 +169,7 @@ const Projects = () => {
                 <ProjectsItems
                   title="Esthetic Clinic - Anamnesis Form V2"
                   urlFront="https://form-front-anamesis.vercel.app/?company=3ca4af53-d327-4b8f-9de3-dcf4d08fbaf9"
-                  urlBack=""
+                  urlBack="https://form-api-toffnxjumq-rj.a.run.app/api/v1/doc"
                   repoFront='https://github.com/fabio-coutinho-dos-santos/form-front-anamesis'
                   repoBack='https://github.com/fabio-coutinho-dos-santos/form-api-v1'
                   icon={<FaReact />}
@@ -177,7 +177,11 @@ const Projects = () => {
                   icon3={<SiPostgresql />}
                 >
 
-                  Page for clients to fill out anamnesis forms, restructured to be multi-company, featuring a new interface and functionalities. Built using NestJS and React. This will be the second version of the anamnesis form, designed by me for a multi-company aesthetic clinic management system, currently under development. For state management, Redux and existing React hooks were employed. The application's backend is also in development but not yet in production. It will include a NestJS API with a Postgres database.
+                  Page for clients to fill out anamnesis forms, restructured to be multi-company, 
+                  featuring a new interface and functionalities. Built using NestJS and React. 
+                  This will be the second version of the anamnesis form, designed by me for a multi-company aesthetic clinic management system, 
+                  currently under development. For state management, Redux and existing React hooks were employed with Zod to validate the inputs. 
+                  The application's backend is also in development and is deployed as GCP Cloud Run service. It will include a NestJS API with a Postgres database.
                 </ProjectsItems>
               </div>
               <div className="col-sm-7">
