@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import './HomeHeader.sass'
+import { FiDownload } from 'react-icons/fi'
 
 const HomeHeader = () => {
 
@@ -28,7 +29,7 @@ const HomeHeader = () => {
                 <div className="col-sm-12">
                   <FaLinkedin id='linkedin' className='mt-4' onClick={() => { window.open('https://www.linkedin.com/in/fabio-coutinho-dos-santos-0ba58a18b') }}></FaLinkedin>
                   <FaGithub id='github' className='mt-4' onClick={() => { window.open('https://github.com/fabio-coutinho-dos-santos') }} />
-                  <input type="button" onClick={downloadResume} className='btn btn-primary' value={"Download Resume"} />
+                  <button type="button" onClick={downloadResume} className='btn btn-primary'><FiDownload className='icon-download'/>   Resume</button>
                 </div>
               </div>
             </div>
