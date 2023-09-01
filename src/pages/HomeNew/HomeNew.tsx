@@ -240,11 +240,11 @@ const HomeNew = () => {
                   urlFront=''
                   repoFront=''
                   icon={<SiNestjs />}
-                  icon2={<SiPostgresql />}
+                  icon2={<SiMongodb />}
                   icon3={<FaReact />}
                 >
                   This portfolio has been developed using React with TypeScript, CSS, Sass, and Bootstrap.
-                  It includes an authentication REST microservice developed in Node.js using NestJS, with a PostgreSQL database.
+                  It includes an authentication REST microservice developed in Node.js using NestJS, with a MongoDb database and deployed as Cloud Run service.
                 </ProjectsItems>
 
                 <hr className='mt-4' />

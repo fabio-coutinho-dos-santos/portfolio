@@ -28,11 +28,11 @@ const Projects = () => {
                   urlFront='https://portfolio-inky-six-97.vercel.app/'
                   repoFront='https://github.com/fabio-coutinho-dos-santos/portfolio'
                   icon={<SiNestjs />}
-                  icon2={<SiPostgresql />}
+                  icon2={<SiMongodb />}
                   icon3={<FaReact />}
                 >
                   This portfolio has been developed using React with TypeScript, CSS, Sass, and Bootstrap.
-                  It includes an authentication REST microservice developed in Node.js using NestJS, with a PostgreSQL database deployed in GCP Cloud Run sevice.
+                  It includes an authentication REST microservice developed in Node.js using NestJS with TypeORM and MongoDb database deployed in GCP Cloud Run sevice.
                 </ProjectsItems>
               </div>
               <div className="col-sm-7">
