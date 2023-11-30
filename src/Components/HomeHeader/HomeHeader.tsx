@@ -18,7 +18,7 @@ const HomeHeader = () => {
           <div className="d-sm-none mt-5"></div>
           <div className="col-sm-3" id='name'>
             <h1>Fabio Coutinho</h1>
-            <h3>Computer Engineer</h3>
+            <h3>Software Engineer</h3>
             <h5>Full Stack Developer</h5>
             <h5>+55 (31) 98545-8015</h5>
             <h5>fabio.santcou@gmail.com</h5>
