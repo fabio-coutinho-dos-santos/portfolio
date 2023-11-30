@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import HomeHeader from '../../Components/HomeHeader/HomeHeader'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import "./Home.css"
@@ -6,17 +6,20 @@ import { FaAngular, FaBootstrap, FaCss3, FaCss3Alt, FaDocker, FaEye, FaGithub, F
 import { SiMongodb, SiMysql, SiNestjs, SiPostgresql, SiPostman, SiSwagger } from 'react-icons/si'
 import ProjectsItems from '../../Components/Projects/ProjectsItems'
 import { useNavigate } from 'react-router-dom'
+import { UserContext } from '../../Context/UserContext'
 
 const Home = () => {
 
   const { setBodyColor } = useSetBodyColor()
+    const {isOpenModal, setIsOpenModal} = useContext(UserContext)
+
   const navigate = useNavigate();
 
   useEffect(() => {
-    setBodyColor('#ECEFF1')
+    // setBodyColor('#ECEFF1')
     // setBodyColor('#CFD8DC')
     // setBodyColor('#90A4AE')
-    // setBodyColor('#546E7A')
+    setBodyColor('#546E7A')
     // setBodyColor('#EEE')
   }, [])
 

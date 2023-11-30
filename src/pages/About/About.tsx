@@ -61,8 +61,7 @@ const About = (props: Props) => {
                 </p>
                 <p>
                   Prior to embarking on my technology career, I joined the Minas Gerais Military Police in
-                  2009 at the age of 18. I have continued to serve as a military police officer while pursuing
-                  academic and professional computing activities. The discipline and dedication I have
+                  2009 at the age of 18 The discipline and dedication I have
                   cultivated through my police career have allowed me to rapidly acquire new skills and
                   exhibit the resilience and patience necessary to excel in software development. I thrive in
                   team environments, drawing on my adaptability and resilience to tackle daily challenges
@@ -85,7 +84,7 @@ const About = (props: Props) => {
               </div>
               <WorkExperiences
                 company='Mensis'
-                title='Fullstack developer (2020 / Current)'
+                title='Software Engineer (2020 / Current)'
                 icons={[
                   ' '
                   , <FaLaravel />

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import HomeHeader from '../../Components/HomeHeader/HomeHeader'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import "./HomeNew.sass"
@@ -7,14 +7,18 @@ import { SiAndroid, SiArduino, SiC, SiCplusplus, SiDigitalocean, SiIonic, SiJira
 import ProjectsItems from '../../Components/Projects/ProjectsItems'
 import { useNavigate } from 'react-router-dom'
 import WorkExperiences from '../../Components/WorkExperiences/WorkExperiences'
+import { UserContext } from '../../Context/UserContext'
 
 const HomeNew = () => {
 
   const { setBodyColor } = useSetBodyColor()
   const navigate = useNavigate();
+  const {isOpenModal, setIsOpenModal} = useContext(UserContext)
+
 
   useEffect(() => {
     setBodyColor('#ECEFF1')
+    // setIsOpenModal(true);
     // setBodyColor('#000')
     // setBodyColor('#CFD8DC')
     // setBodyColor('#90A4AE')
@@ -79,6 +83,7 @@ const HomeNew = () => {
               <div className='mt-5'>
                 <div className="row card-content">
                   <h1>About me</h1>
+                  {isOpenModal && <h1> SIM </h1>}
                   <div id="trace"></div>
                   <span className='mt-3'>With over 5 years of experience in software
                     development, I am highly motivated and passionate about building innovative solutions.

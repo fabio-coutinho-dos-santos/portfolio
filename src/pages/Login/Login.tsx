@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Login.sass'
 import { useSetBodyColor } from '../../hooks/useSetBodyColor'
 import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
@@ -8,8 +8,11 @@ import { StorageKeys } from '../../helpers/StorageKeys';
 import { useHttp } from '../../hooks/useHttp';
 import { ApiUrls } from '../../Constants/ApiUrls';
 import { UserLogin } from '../../Models/UserLogin';
+import { UserContext } from '../../Context/UserContext';
 
 const Login = () => {
+
+  const {isOpenModal, setIsOpenModal} = useContext(UserContext)
 
   const { setBodyColor } = useSetBodyColor()
 
@@ -19,6 +22,7 @@ const Login = () => {
 
   useEffect(() => {
     setBodyColor("#ECEFF1")
+    console.log(isOpenModal);
     // setBodyColor("#F8F8F8F8")
   }, [])
 
@@ -35,8 +39,10 @@ const Login = () => {
       const response = await makePost(ApiUrls.LOGIN, userLogin)
       const jsonResponse = await inspectResponse(response)
       await setItem(StorageKeys.ACCESS_TOKEN, jsonResponse.accessToken)
+      console.log('AFTER',isOpenModal);
       setLoading(false)
-      window.location.reload();
+      // window.location.reload();
+      navigate('/home')
     } catch (e) {
       alert(e)
       setLoading(false)
@@ -60,7 +66,7 @@ const Login = () => {
               </div>
               <div className="row">
                 <div className="col-6 col-sm-3">
-                  <input type="submit" className='btn btn-primary' value={'Login'} />
+                  <input type="submit" onClick={()=>setIsOpenModal(true)} className='btn btn-primary' value={'Login'} />
                 </div>
                 {loading && <div className="col-3">
                   <div className="spinner-border" role="status"></div>

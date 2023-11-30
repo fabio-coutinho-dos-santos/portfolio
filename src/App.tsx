@@ -20,16 +20,17 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 import { StorageKeys } from './helpers/StorageKeys';
 import { FaArrowUp } from 'react-icons/fa'
 import HomeNew from './pages/HomeNew/HomeNew';
+import { UserContextProvider } from './Context/UserContext';
 
 function App() {
   const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
-  const {setBodyColor} = useSetBodyColor()
-  const {getItem, setItem} = useLocalStorage()
+  const { setBodyColor } = useSetBodyColor()
+  const { getItem, setItem } = useLocalStorage()
   const [logged, setLogged] = useState(false)
   const [avatarH, setAvatarH] = useState('200px')
   const [pageTitle, setPageTitle] = useState('Home')
 
-  useEffect(()=>{
+  useEffect(() => {
     minimizeAvatar();
     // setBodyColor("whitesmoke")
     document.documentElement.style.setProperty('--avatarH', avatarH)
@@ -37,7 +38,7 @@ function App() {
     console.log(token)
     token ? setLogged(true) : setLogged(false)
     console.log(logged)
-  },[])
+  }, [])
 
   const toggle = () => {
 
@@ -53,72 +54,74 @@ function App() {
     }
   };
 
-  const exit = () =>{
+  const exit = () => {
     setItem(StorageKeys.ACCESS_TOKEN, '')
     setLogged(false);
     window.location.href = '/login'
   }
 
-  const minimizeAvatar = () =>{
+  const minimizeAvatar = () => {
     console.log('min')
     setAvatarH('60px')
     document.documentElement.style.setProperty('--avatarH', avatarH)
   }
 
-  const maximizeAvatar = () =>{
+  const maximizeAvatar = () => {
     console.log('max')
     setAvatarH('200px')
     document.documentElement.style.setProperty('--avatarH', avatarH)
   }
 
   return (
-      <>
+    <>
+      <UserContextProvider>
         <BrowserRouter>
-        {!logged ? (
-          <>
-            <Routes>
-              <Route path='/login' Component={Login}></Route>
-              <Route path='/home' Component={Login}></Route>
-              <Route path='/about' Component={Login}></Route>
-              <Route path='/projects' Component={Login}></Route>
-              <Route path='/' Component={Login}></Route>
-            </Routes>
-          </>) : (
-          <div id='app'>
+          {!logged ? (
+            <>
+              <Routes>
+                <Route path='/login' Component={Login}></Route>
+                <Route path='/home' Component={Login}></Route>
+                <Route path='/about' Component={Login}></Route>
+                <Route path='/projects' Component={Login}></Route>
+                <Route path='/' Component={Login}></Route>
+              </Routes>
+            </>) : (
+            <div id='app'>
               <Sidebar className='sidebar position-fixed' defaultCollapsed width='200px' backgroundColor='' breakPoint="sm">
                 <Menu>
-                  <MenuItem className='collapse-btn' icon={<MenuOutlinedIcon/>} onClick={() => {toggle();}}>
-                  {" "}
-                  <h2>{pageTitle}</h2>
+                  <MenuItem className='collapse-btn' icon={<MenuOutlinedIcon />} onClick={() => { toggle(); }}>
+                    {" "}
+                    <h2>{pageTitle}</h2>
                   </MenuItem>
                   {/* <div className='avatar d-none d-lg-block'/> */}
-                  <Link to={'/home'} className='link'><MenuItem  onClick={()=>{ broken && toggle(); setPageTitle('Home')}} className='icon' icon={<HomeOutlinedIcon />}>Home</MenuItem></Link>
-                  <Link to={'/about'} className='link'><MenuItem onClick={()=>{ broken && toggle(); setPageTitle('About')}} icon={<PeopleOutlinedIcon />}>About</MenuItem></Link>
-                  <Link to={'/projects'} className='link'><MenuItem onClick={()=>{ broken && toggle(); setPageTitle('Projects')}} icon={<ContactsOutlinedIcon />}>Projects</MenuItem></Link>
+                  <Link to={'/home'} className='link'><MenuItem onClick={() => { broken && toggle(); setPageTitle('Home') }} className='icon' icon={<HomeOutlinedIcon />}>Home</MenuItem></Link>
+                  <Link to={'/about'} className='link'><MenuItem onClick={() => { broken && toggle(); setPageTitle('About') }} icon={<PeopleOutlinedIcon />}>About</MenuItem></Link>
+                  <Link to={'/projects'} className='link'><MenuItem onClick={() => { broken && toggle(); setPageTitle('Projects') }} icon={<ContactsOutlinedIcon />}>Projects</MenuItem></Link>
                   <Link to={'/login'} className='link'><MenuItem onClick={exit} icon={<ExitToAppIcon />}>Exit</MenuItem></Link>
                 </Menu>
               </Sidebar>
               <div className="navbar d-lg-none">
                 {broken &&
-                  <div className="icon-sidebar" onClick={()=>{toggle()}}>
-                    <MenuOutlinedIcon className='position-absolute top-0 start-0'/>
+                  <div className="icon-sidebar" onClick={() => { toggle() }}>
+                    <MenuOutlinedIcon className='position-absolute top-0 start-0' />
                   </div>
                 }
                 <div>
-                  <ExitToAppIcon onClick={exit} className='position-absolute top-0 end-0'/>
+                  <ExitToAppIcon onClick={exit} className='position-absolute top-0 end-0' />
                 </div>
               </div>
               <Routes>
-              <Route path='/' Component={HomeNew}></Route>
-              <Route path='/home' Component={HomeNew}></Route>
-              <Route path='/login' Component={HomeNew}></Route>
-              <Route path='/about' Component={About}></Route>
-              <Route path='/projects' Component={Projects}></Route>
-            </Routes>
-              <div className='btn-end position-fixed bottom-0 end-0' onClick={()=>{window.scrollTo(0, 0)}}><FaArrowUp id="icon-arrow"/></div>
-          </div>          
-        )}
+                <Route path='/' Component={HomeNew}></Route>
+                <Route path='/home' Component={HomeNew}></Route>
+                <Route path='/login' Component={HomeNew}></Route>
+                <Route path='/about' Component={About}></Route>
+                <Route path='/projects' Component={Projects}></Route>
+              </Routes>
+              <div className='btn-end position-fixed bottom-0 end-0' onClick={() => { window.scrollTo(0, 0) }}><FaArrowUp id="icon-arrow" /></div>
+            </div>
+          )}
         </BrowserRouter>
+      </UserContextProvider>
     </>
   );
 }
