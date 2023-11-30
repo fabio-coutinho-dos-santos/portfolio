@@ -85,7 +85,7 @@ const About = (props: Props) => {
               </div>
               <WorkExperiences
                 company='Mensis'
-                title='Fullstack developer (2020 / Current)'
+                title='Software Engineer (2020 / Current)'
                 icons={[
                   ' '
                   , <FaLaravel />
@@ -110,15 +110,20 @@ const About = (props: Props) => {
                 ]}
               >
                 <p> Working on an electronic workpoint system and Iot projects,
-                  I developed REST APIs with Node.js, Express, NestJs and Laravel,
-                  integrated with MongoDb and MySql databases in addition to front-end development using
-                  Ionic, Angular, Laravel and Bootstrap. Microservices designed and deployed on GCP using Docker,
-                  Cloud Run, Cloud Functions and Cloud Pub/Sub in the above languages as well as Python.
-                  Elaboration of triggers in GCP for automated delivery with CI/CD in Cloud Build.
-                  In addition to this, I work on the design and implementation of IoT projects,
-                  programming microcontrollers like ESP-32 with C and C++ languages, as well as working with Raspberry Pi using Python.
-                  Collaborating cross-functionally from the creation of solutions to their development,
-                  testing and documentation. Task management through Jira. </p>
+                  Developed REST APIs using Node.js, Express, NestJs, and Laravel, integrated with MongoDB and MySQL databases.
+                  Front-end development with Ionic, Angular, Laravel, Bootstrap, and React. 
+                  Designed and implemented a microservices architecture on Google Cloud Platform (GCP), 
+                  utilizing Docker for containerization, and deploying microservices on Cloud Run, 
+                  Cloud Functions, and Cloud Pub/Sub. Implemented microservices in Node.js, Express, NestJs, Laravel, and Python. 
+                  Configured and automated deployment triggers in GCP for CI/CD using GitHub Actions and Cloud Build. 
+                  Collaborated cross-functionally throughout the entire development lifecycle, from ideation to testing, and documentation. 
+                  Task management conducted through Jira. 
+                  Additional expertise includes designing microservices with both queue protocols and HTTP, 
+                  creating deployment manifests in Kubernetes for efficient scaling and management, 
+                  and developing observability strategies using Otel, Promtail, Prometheus, and Grafana. 
+                  Integrated RESTful APIs with a payment gateway for seamless transaction processing. 
+                  Utilized GitHub Actions to create CI/CD pipelines and applied unit and integration tests using Jest and PHPUnit.
+                </p>
               </WorkExperiences>
 
               <div className='mt-4'><hr /></div>

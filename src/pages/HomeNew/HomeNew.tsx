@@ -87,7 +87,9 @@ const HomeNew = () => {
                     and GCP deployment, including Cloud Run, Cloud Functions and Cloud Pub/Sub. I am also
                     skilled in implementing CI/CD automation using Cloud Build. Additionally, I have frontend
                     expertise in Laravel, Angular, React, and Bootstrap, enabling me to deliver seamless user
-                    experiences.
+                    experiences. From academia to professional roles, I consistently deliver high-quality work. 
+                    My journey includes service in the Minas Gerais Military Police, 
+                    cultivating resilience, discipline, and dedication crucial for success in a software development career. 
                   </span>
                   <div className='see-more'><span onClick={() => navigate('/about')}>About</span> </div>
                 </div>
@@ -187,7 +189,7 @@ const HomeNew = () => {
                 <div id="trace"></div>
                 <WorkExperiences
                   company='Mensis'
-                  title='Fullstack developer (2020 / Current)'
+                  title='Software Engineer (2020 / Current)'
                   icons={[
                     ' '
                     , <FaLaravel />
