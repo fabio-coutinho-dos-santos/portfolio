@@ -17,7 +17,7 @@ import WorkExperiences from '../../Components/WorkExperiences/WorkExperiences';
 import { useEffect } from 'react';
 
 const downloadResume = () => {
-  window.location.href = "/documents/cv-new.pdf"
+  window.location.href = "/documents/resume.pdf"
 }
 
 type Props = {}
@@ -85,7 +85,7 @@ const About = (props: Props) => {
               </div>
               <WorkExperiences
                 company='Mensis'
-                title='Software Engineer (2020 / Current)'
+                title='Senior Back End Developer (2020 / Current)'
                 icons={[
                   ' '
                   , <FaLaravel />
@@ -130,7 +130,7 @@ const About = (props: Props) => {
 
               <WorkExperiences
                 company='4Cadia'
-                title='Fullstack developer ( 2022-03 / 2022-06)'
+                title='Senior Back End Developer ( 2022-03 / 2022-06)'
                 icons={[
                   ' '
                   , <SiNestjs />

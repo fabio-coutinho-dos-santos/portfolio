@@ -5,7 +5,7 @@ import { FiDownload } from 'react-icons/fi'
 const HomeHeader = () => {
 
   const downloadResume = () => {
-    window.location.href = "/documents/cv-new.pdf"
+    window.location.href = "/documents/resume.pdf"
   }
 
   return (

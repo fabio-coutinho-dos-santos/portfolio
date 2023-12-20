@@ -80,16 +80,11 @@ const HomeNew = () => {
                 <div className="row card-content">
                   <h1>About me</h1>
                   <div id="trace"></div>
-                  <span className='mt-3'>With over 5 years of experience in software
-                    development, I am highly motivated and passionate about building innovative solutions.
-                    As an experienced full-stack developer, I possess proficiency in Node.js, Express, NestJs,
-                    and Laravel. My expertise extends to REST API development, Docker-based microservices,
-                    and GCP deployment, including Cloud Run, Cloud Functions and Cloud Pub/Sub. I am also
-                    skilled in implementing CI/CD automation using Cloud Build. Additionally, I have frontend
-                    expertise in Laravel, Angular, React, and Bootstrap, enabling me to deliver seamless user
-                    experiences. From academia to professional roles, I consistently deliver high-quality work. 
-                    My journey includes service in the Minas Gerais Military Police, 
-                    cultivating resilience, discipline, and dedication crucial for success in a software development career. 
+                  <span className='mt-3'>Master’s in Computer Science and Bachelor’s in Computer Engineering, I bring a 10-year journey marked by
+                    constant evolution. From experiences in military discipline to the relentless pursuit of excellence in software
+                    development, I’m deeply motivated. A team player, I thrive collaboratively, valuing diverse perspectives. A fast
+                    learner, I adapt swiftly, contributing effectively to team goals. My unique blend of technical expertise and
+                    teamwork commitment positions me to make meaningful contributions.
                   </span>
                   <div className='see-more'><span onClick={() => navigate('/about')}>About</span> </div>
                 </div>
@@ -113,7 +108,7 @@ const HomeNew = () => {
 
           </div>
 
-          
+
 
           <div className="row justify-content-center">
             <div className="col-sm-12">
@@ -189,7 +184,7 @@ const HomeNew = () => {
                 <div id="trace"></div>
                 <WorkExperiences
                   company='Mensis'
-                  title='Software Engineer (2020 / Current)'
+                  title='Senior Back End Developer (2020 / Current)'
                   icons={[
                     ' '
                     , <FaLaravel />
@@ -218,7 +213,7 @@ const HomeNew = () => {
 
                 <WorkExperiences
                   company='4Cadia'
-                  title='Fullstack developer (2022-03 / 2022-06)'
+                  title='Senior Back End Developer (2022-03 / 2022-06)'
                   icons={[
                     ' '
                     , <SiNestjs />
